@@ -5,7 +5,7 @@ import Image from "next/image"
 export function NavbarClient() {
   return (
     <nav className="w-full bg-white">
-      <div className="max-w-[1250px] w-full mx-auto px-6 pt-9 pb-4 flex items-center justify-between">
+      <div className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-9 pb-4 flex items-center justify-between">
 
         {/* Left: logo */}
         <a href="/" className="block">

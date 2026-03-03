@@ -6,7 +6,7 @@ const ease = [0.4, 0, 0.2, 1] as const
 
 export function Hero() {
   return (
-    <header className="max-w-[1250px] w-full mx-auto px-6 pt-8 pb-14 flex flex-col gap-6">
+    <header className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-8 pb-14 flex flex-col gap-6">
       <motion.p
         className="text-sm font-normal tracking-[-0.31px] leading-6 text-[#101828]"
         initial={{ opacity: 0, y: 32 }}
