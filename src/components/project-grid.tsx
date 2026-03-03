@@ -4,13 +4,12 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion"
 import Image from "next/image"
-import { ArrowUpRight } from "lucide-react"
 import { projects, Project } from "@/lib/projects"
 
 const ease = [0.4, 0, 0.2, 1] as const
-const CURSOR_OFFSET_X = 20
-const CARD_HEIGHT_EST = 200
-const CARD_WIDTH = 260
+const CURSOR_OFFSET_X = 8
+const CARD_HEIGHT_EST = 140
+const CARD_WIDTH = 280
 const VIEWPORT_PADDING = 16
 
 export function ProjectGrid() {
@@ -27,7 +26,7 @@ export function ProjectGrid() {
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
       let x = e.clientX + CURSOR_OFFSET_X
-      let y = e.clientY - CARD_HEIGHT_EST - 20
+      let y = e.clientY - CARD_HEIGHT_EST - 4
       x = Math.min(x, window.innerWidth - CARD_WIDTH - VIEWPORT_PADDING)
       x = Math.max(x, VIEWPORT_PADDING)
       y = Math.min(y, window.innerHeight - CARD_HEIGHT_EST - VIEWPORT_PADDING)
@@ -90,24 +89,26 @@ export function ProjectGrid() {
           <AnimatePresence>
             {hoveredProject && (
               <motion.div
-                className="fixed top-0 left-0 z-50 pointer-events-none bg-white rounded-2xl p-5 w-[260px] shadow-2xl"
+                className="fixed top-0 left-0 z-50 pointer-events-none bg-[#f9fafb] rounded-2xl p-5 w-[280px] shadow-[0px_25px_50px_0px_rgba(0,0,0,0.25)]"
                 style={{ x: springX, y: springY }}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
-                <div className="flex justify-end mb-6">
-                  <span className="w-9 h-9 bg-[#0a0a0a] rounded-full flex items-center justify-center">
-                    <ArrowUpRight className="w-4 h-4 text-white" />
-                  </span>
-                </div>
-                <p className="text-2xl font-bold tracking-tight leading-tight text-[#0a0a0a] mb-4">
-                  {hoveredProject.title}
+                <p className="text-xl font-medium leading-snug tracking-tight text-[#0a0a0a] mb-4">
+                  {hoveredProject.description}
                 </p>
-                <span className="inline-flex border border-[#0a0a0a]/20 rounded-full px-3 py-1 text-sm text-[#0a0a0a]">
-                  {hoveredProject.action}
-                </span>
+                <div className="flex flex-wrap gap-2">
+                  {hoveredProject.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="border-2 border-black rounded-full px-3 py-1 text-sm tracking-[-0.15px] text-[#0a0a0a] whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>,

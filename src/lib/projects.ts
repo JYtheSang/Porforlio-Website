@@ -4,15 +4,19 @@ export interface Project {
   image: string
   year: string
   action: string
+  description: string
+  tags: string[]
 }
 
 export const projects: Project[] = [
   {
     title: "PayPal Social Payment",
     href: "https://www.jieyangdesign.com/paypal-social-payment-product-design/",
-    image: "/projects/paypal-social-payment.png",
+    image: "/projects/paypal-social-payment_L.png",
     year: "2019-2024",
     action: "Product Design",
+    description: "Lead Product Designer for PayPal's Social Payments",
+    tags: ["PayPal", "Consumer", "P2P"],
   },
   {
     title: "SAP Copilot",
@@ -20,6 +24,8 @@ export const projects: Project[] = [
     image: "/projects/sap-copilot.png",
     year: "2018",
     action: "View Case Study",
+    description: "Designed an AI Copilot for Enterprise Workflows",
+    tags: ["SAP", "Enterprise", "AI"],
   },
   {
     title: "SAP Fiori for iOS",
@@ -27,6 +33,8 @@ export const projects: Project[] = [
     image: "/projects/sap-fiori-ios.png",
     year: "2018",
     action: "View Gallery",
+    description: "Built iOS Design Language for SAP Fiori",
+    tags: ["SAP", "iOS", "Design System"],
   },
   {
     title: "Pinterest Explorer",
@@ -34,6 +42,8 @@ export const projects: Project[] = [
     image: "/projects/pinterest-explorer.jpg",
     year: "2016",
     action: "View Case Study",
+    description: "UX Strategy for Pinterest Discovery",
+    tags: ["Pinterest", "UX Strategy", "Discovery"],
   },
   {
     title: "Ryanair Adventure",
@@ -41,6 +51,8 @@ export const projects: Project[] = [
     image: "/projects/ryanair-adventure.png",
     year: "2016",
     action: "View Case Study",
+    description: "Redesigned the Adventure Travel Experience",
+    tags: ["Ryanair", "Travel", "UX"],
   },
   {
     title: "Discharge Doc Evaluation",
@@ -48,6 +60,8 @@ export const projects: Project[] = [
     image: "/projects/discharge-doc-eval.jpg",
     year: "2016",
     action: "View Case Study",
+    description: "Evaluated Hospital Discharge Documentation",
+    tags: ["Healthcare", "Research", "UX"],
   },
   {
     title: "COPD Management",
@@ -55,6 +69,8 @@ export const projects: Project[] = [
     image: "/projects/copd-management.jpg",
     year: "2016",
     action: "View Case Study",
+    description: "Designed COPD Patient Communication",
+    tags: ["Healthcare", "Communication", "UX"],
   },
   {
     title: "Portfolio Planning for Crane",
@@ -62,6 +78,8 @@ export const projects: Project[] = [
     image: "/projects/portfolio-planning-crane.jpg",
     year: "2016",
     action: "View Case Study",
+    description: "Portfolio Planning Tool for Crane Co.",
+    tags: ["Enterprise", "Strategy", "UX"],
   },
   {
     title: "Guardian",
@@ -69,6 +87,8 @@ export const projects: Project[] = [
     image: "/projects/guardian.jpg",
     year: "2015",
     action: "View Project",
+    description: "Guardian Personal Safety Device",
+    tags: ["Safety", "IoT", "Industrial"],
   },
   {
     title: "Matrix C",
@@ -76,6 +96,8 @@ export const projects: Project[] = [
     image: "/projects/matrix-c.jpg",
     year: "2016",
     action: "View Gallery",
+    description: "Matrix C Industrial Design Gallery",
+    tags: ["Industrial", "Gallery"],
   },
   {
     title: "Fixpert",
@@ -83,6 +105,8 @@ export const projects: Project[] = [
     image: "/projects/fixpert.jpg",
     year: "2016",
     action: "View Gallery",
+    description: "Fixpert DIY Repair Community Platform",
+    tags: ["Mobile", "Community", "UX"],
   },
   {
     title: "Cycle Bike",
@@ -90,6 +114,8 @@ export const projects: Project[] = [
     image: "/projects/cycle-bike.jpg",
     year: "2016",
     action: "View Gallery",
+    description: "Sustainable Urban Bike Design",
+    tags: ["Industrial", "Transport"],
   },
   {
     title: "Pure",
@@ -97,6 +123,8 @@ export const projects: Project[] = [
     image: "/projects/pure.png",
     year: "2016",
     action: "View Gallery",
+    description: "Pure Minimal Product Design",
+    tags: ["Industrial", "Minimal"],
   },
   {
     title: "Sub",
@@ -104,5 +132,7 @@ export const projects: Project[] = [
     image: "/projects/sub.jpg",
     year: "2016",
     action: "View Project",
+    description: "Sub Submarine-Inspired Concept Design",
+    tags: ["Industrial", "Concept"],
   },
 ]
