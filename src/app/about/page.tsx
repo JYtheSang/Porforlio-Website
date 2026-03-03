@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "About Me — Jie Yang",
@@ -8,8 +9,9 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-16">
-      <div className="max-w-[580px]">
+    <main>
+      <div className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-16 pb-0">
+        <div className="max-w-[580px]">
 
         <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#f5f5f5] mb-10">
           <Image
@@ -38,15 +40,52 @@ export default function About() {
           </p>
         </div>
 
-        <a
-          href="/Resume_JieY.pdf"
-          download
-          className="inline-flex items-center mt-10 px-5 py-2.5 bg-[#0a0a0a] text-white text-[13px] font-bold tracking-[1px] uppercase rounded-lg hover:opacity-80 transition-opacity"
-        >
-          Resume
-        </a>
-
+          <a
+            href="/Resume_JieY.pdf"
+            download
+            className="inline-flex items-center mt-10 px-5 py-2.5 bg-[#0a0a0a] text-white text-[13px] font-bold tracking-[1px] uppercase rounded-lg hover:opacity-80 transition-opacity"
+          >
+            Resume
+          </a>
+        </div>
       </div>
+
+      <footer
+        id="footer"
+        className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-20 flex flex-col items-center gap-6"
+      >
+        <div
+          id="socialLinks"
+          className="flex items-center justify-center gap-[36px]"
+        >
+          <a
+            href="https://www.linkedin.com/in/jieyangdesign/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/jieyang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+          >
+            <Instagram className="w-4 h-4" />
+            Instagram
+          </a>
+          <a
+            href="mailto:jieydesign@gmail.com"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+            aria-label="Email jieydesign@gmail.com"
+          >
+            <Mail className="w-4 h-4" />
+            Email
+          </a>
+        </div>
+      </footer>
     </main>
   )
 }

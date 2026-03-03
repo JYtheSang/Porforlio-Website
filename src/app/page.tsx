@@ -1,6 +1,6 @@
 import { Hero } from "@/components/hero"
 import { ProjectGrid } from "@/components/project-grid"
-import { Linkedin, Instagram } from "lucide-react"
+import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export default function Home() {
   return (
@@ -11,12 +11,6 @@ export default function Home() {
         id="footer"
         className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-20 flex flex-col items-center gap-6"
       >
-        <a
-          href="mailto:jieyang@jieyangdesign.com"
-          className="text-base font-normal tracking-[-0.31px] leading-6 text-[#101828] hover:text-[#0a0a0a] transition-colors"
-        >
-          Get in touch @ jieyang@jieyangdesign.com
-        </a>
         <div
           id="socialLinks"
           className="flex items-center justify-center gap-[36px]"
@@ -40,10 +34,12 @@ export default function Home() {
             Instagram
           </a>
           <a
-            href="/about"
+            href="mailto:jieydesign@gmail.com"
             className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+            aria-label="Email jieydesign@gmail.com"
           >
-            About Me
+            <Mail className="w-4 h-4" />
+            Email
           </a>
         </div>
       </footer>
