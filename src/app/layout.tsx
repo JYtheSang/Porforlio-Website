@@ -3,7 +3,7 @@ import { NavbarClient } from "@/components/navbar-client"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Jie Yang — Design Portfolio",
+  title: "Jie Yang",
   description: "Product Design · UX Strategy",
 }
 

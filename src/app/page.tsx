@@ -9,7 +9,7 @@ export default function Home() {
       <ProjectGrid />
       <footer
         id="footer"
-        className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-20 flex flex-col items-center gap-6"
+        className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-16 flex flex-col items-center gap-6"
       >
         <div
           id="socialLinks"
