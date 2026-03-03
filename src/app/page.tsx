@@ -19,7 +19,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/jieyangdesign/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#fafafa] hover:opacity-60 transition-opacity"
           >
             <Linkedin className="w-4 h-4" />
             LinkedIn
@@ -28,14 +28,14 @@ export default function Home() {
             href="https://www.instagram.com/jieyang"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#fafafa] hover:opacity-60 transition-opacity"
           >
             <Instagram className="w-4 h-4" />
             Instagram
           </a>
           <a
             href="mailto:jieydesign@gmail.com"
-            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#0a0a0a] hover:opacity-60 transition-opacity"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#fafafa] hover:opacity-60 transition-opacity"
             aria-label="Email jieydesign@gmail.com"
           >
             <Mail className="w-4 h-4" />

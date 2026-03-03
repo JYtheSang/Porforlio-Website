@@ -59,7 +59,7 @@ export function ProjectGrid() {
               onMouseEnter={() => setHoveredProject(project)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#f5f5f5] mb-3">
+              <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -70,14 +70,14 @@ export function ProjectGrid() {
                 />
               </div>
               <div className="flex items-center justify-between px-1 mb-1">
-                <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#0a0a0a] truncate">
+                <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
                   {project.title}
                 </span>
-                <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#6a7282] whitespace-nowrap ml-2">
+                <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
                   {project.year}
                 </span>
               </div>
-              <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#4a5565] px-1">
+              <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
                 {project.action}
               </p>
             </a>
