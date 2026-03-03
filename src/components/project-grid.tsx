@@ -46,7 +46,7 @@ export function ProjectGrid() {
         className="max-w-[1250px] w-full mx-auto px-6 pb-16"
         initial={{ opacity: 0, y: 32 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4, delay: 1.0, ease }}
+        transition={{ duration: 1.4, delay: 1.6, ease }}
       >
         <div className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5">
           {projects.map((project) => (
