@@ -52,8 +52,7 @@ export function ProjectGrid() {
             <a
               key={project.title}
               href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(!project.href.startsWith("/") && { target: "_blank", rel: "noopener noreferrer" })}
               className="block"
               onMouseEnter={() => setHoveredProject(project)}
               onMouseLeave={() => setHoveredProject(null)}

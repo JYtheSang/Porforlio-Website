@@ -11,7 +11,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "PayPal Social Payment",
-    href: "https://www.jieyangdesign.com/paypal-social-payment-product-design/",
+    href: "/paypal-social-payment",
     image: "/projects/paypal-social-payment_L.png",
     year: "2019-2024",
     action: "Product Design",
