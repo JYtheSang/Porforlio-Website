@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 // ARC color palette
 const arcColors: Record<string, string> = {
   c0: "#111827",
-  c1: "#3b82f6",
+  c1: "#6c8eff",
   c2: "#ef4444",
   c3: "#22c55e",
   c4: "#eab308",
@@ -233,14 +233,10 @@ export default function KBAI() {
           </div>
         </div>
 
-        {/* ── The Problem ── */}
-        <div className="py-16 border-b border-[#2a2d36]">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            The Problem
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
-            What makes ARC so hard
-          </h2>
+        {/* ── Section: Overview ── */}
+        <section id="overview" className="py-16 border-b border-[#2a2d36]">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">01 — Overview</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">What makes ARC so hard</h2>
           <p className="text-base text-[#7b7f8f] max-w-[640px] leading-relaxed mb-10">
             Each ARC problem is a visual IQ test. You&apos;re shown a handful of colored grid pairs
             (input → output) and must infer the hidden transformation rule — then apply it to
@@ -269,18 +265,16 @@ export default function KBAI() {
               outLabel="predicted output"
             />
           </div>
-          <p className="text-[12px] text-[#3f3f46] mb-10">
+          <p className="text-[#7b7f8f] leading-7 mb-6">
             Problem <code className="text-[#52525b]">ed36ccf7</code> from the Final milestone.
             The rule is a matrix transpose — inferred from examples alone.
           </p>
-        </div>
+        </section>
 
-        {/* ── Approach ── */}
-        <div className="py-16 border-b border-[#2a2d36]">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            Approach
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
+        {/* ── Section: Approach ── */}
+        <section id="approach" className="py-16 border-b border-[#2a2d36]">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">02 — Approach</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
             A two-tier reasoning engine
           </h2>
           <p className="text-base text-[#7b7f8f] max-w-[640px] leading-relaxed mb-10">
@@ -316,7 +310,7 @@ export default function KBAI() {
             ].map((tier, i) => (
               <div key={tier.num} className={`p-7 ${i > 0 ? "border-t border-[#2a2d36]" : ""}`}>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-6 h-6 rounded-full bg-[#3b82f6] flex items-center justify-center text-[11px] font-bold text-white flex-shrink-0">
+                  <div className="w-11 h-11 bg-[#6c8eff1a] border border-[#6c8eff40] rounded-lg flex items-center justify-center font-mono text-[15px] font-bold text-[#6c8eff] flex-shrink-0">
                     {tier.num}
                   </div>
                   <div>
@@ -328,14 +322,12 @@ export default function KBAI() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* ── Models ── */}
-        <div className="py-16 border-b border-[#2a2d36]">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            Transformation Models
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
+        {/* ── Section: Transformation Models ── */}
+        <section id="models" className="py-16 border-b border-[#2a2d36]">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">03 — Transformation Models</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
             35+ models across 9 families
           </h2>
           <p className="text-base text-[#7b7f8f] max-w-[640px] leading-relaxed mb-10">
@@ -350,7 +342,7 @@ export default function KBAI() {
                 className="border border-[#2a2d36] rounded-xl p-5 bg-[#17181c]"
               >
                 <div className="flex items-center gap-2.5 mb-3">
-                  <div className="w-6 h-6 rounded bg-[#1e2d45] text-[#3b82f6] text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">
+                  <div className="w-6 h-6 rounded bg-[#6c8eff1a] text-[#6c8eff] text-[10px] font-extrabold flex items-center justify-center flex-shrink-0">
                     {family.id}
                   </div>
                   <span className="text-sm font-semibold text-[#fafafa]">{family.name}</span>
@@ -368,14 +360,12 @@ export default function KBAI() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* ── Pipeline ── */}
-        <div className="py-16 border-b border-[#2a2d36]">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            Pipeline
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-10">
+        {/* ── Section: Pipeline ── */}
+        <section id="pipeline" className="py-16 border-b border-[#2a2d36]">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">04 — Pipeline</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-10">
             How the agent solves a problem
           </h2>
 
@@ -391,21 +381,19 @@ export default function KBAI() {
                 <div>
                   <h3 className="text-sm font-semibold text-[#fafafa] mb-1.5">{step.title}</h3>
                   <p className="text-sm text-[#7b7f8f] leading-relaxed mb-2">{step.body}</p>
-                  <code className="inline-block text-[11px] font-mono text-[#3b82f6] bg-[#0f1a2e] border border-[#1e3a5f] px-2.5 py-1 rounded">
+                  <code className="inline-block text-[11px] font-mono text-[#6c8eff] bg-[#6c8eff1a] border border-[#6c8eff40] px-2.5 py-1 rounded">
                     {step.code}
                   </code>
                 </div>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* ── Results ── */}
-        <div className="py-16 border-b border-[#2a2d36]">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            Results
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
+        {/* ── Section: Results ── */}
+        <section id="results" className="py-16 border-b border-[#2a2d36]">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">05 — Results</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">
             Final milestone performance
           </h2>
           <p className="text-base text-[#7b7f8f] max-w-[640px] leading-relaxed mb-10">
@@ -429,21 +417,19 @@ export default function KBAI() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* ── Takeaways ── */}
+        {/* ── Section: Takeaways ── */}
         <div className="pt-16">
-          <div className="text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] mb-3">
-            Takeaways
-          </div>
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#fafafa] mb-10">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">06 — Takeaways</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-10">
             What this taught me
           </h2>
           <div className="flex flex-col gap-6">
             {takeaways.map((t, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-[#3b82f6] mt-[7px]" />
-                <p className="text-sm text-[#7b7f8f] leading-relaxed">
+                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-[#6c8eff] mt-[7px]" />
+                <p className="text-[15px] text-[#7b7f8f] leading-7">
                   <strong className="text-[#fafafa] font-semibold">{t.strong}</strong>
                   {t.body}
                 </p>
