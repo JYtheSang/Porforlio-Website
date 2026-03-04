@@ -16,7 +16,7 @@ export function NavbarClient() {
             href="#work"
             className="text-[13px] font-bold tracking-[0px] text-[#60a5fa] hover:opacity-80 transition-opacity"
           >
-            Design
+            Work
           </a>
           <a
             href="/about"
