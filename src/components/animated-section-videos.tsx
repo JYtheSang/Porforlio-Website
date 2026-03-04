@@ -48,13 +48,13 @@ export function AnimatedSectionVideos() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="flex items-center justify-center gap-20 py-16 px-16">
+      <div className="flex items-center justify-center gap-18 py-16 px-16">
         {VIDEOS.map((src, i) => (
           <div
             key={i}
-            className="relative overflow-hidden flex-1"
+            className="relative overflow-hidden flex-1 rounded-[32px] shadow-[0_24px_70px_rgba(15,23,42,0.55)]"
             style={{
-              maxWidth: "220px",
+              maxWidth: "260px",
               aspectRatio: "816 / 1692",
             }}
           >
