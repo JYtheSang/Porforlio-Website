@@ -1,6 +1,6 @@
-import Image from "next/image"
 import type { Metadata } from "next"
 import { ArrowLeft, ArrowUpRight } from "lucide-react"
+import { AnimatedSectionImage } from "@/components/animated-section-image"
 
 export const metadata: Metadata = {
   title: "PayPal Social Payment — Jie Yang",
@@ -187,16 +187,13 @@ export default function PayPalSocialPayment() {
         <div key={section.id} className="mt-20">
           {/* Section image */}
           <div className="max-w-[1250px] mx-auto px-6">
-            <div className="w-full rounded-2xl overflow-hidden bg-[#18181b]">
-              <Image
-                src={section.image}
-                alt={section.title}
-                width={1600}
-                height={900}
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
+            <AnimatedSectionImage
+              src={section.image}
+              alt={section.title}
+              width={1600}
+              height={900}
+              loading="lazy"
+            />
           </div>
 
           {/* Section text */}
