@@ -25,7 +25,7 @@ export default function Home() {
             LinkedIn
           </a>
           <a
-            href="https://www.instagram.com/jieyang"
+            href="https://www.instagram.com/jyaanng"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#fafafa] hover:opacity-60 transition-opacity"
