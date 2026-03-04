@@ -44,18 +44,20 @@ export function AnimatedSectionVideos() {
   return (
     <div
       ref={containerRef}
-      className={`w-full rounded-2xl overflow-hidden bg-white transform transition-all duration-[2000ms] ease-out ${
+      className={`w-full overflow-hidden bg-white transform transition-all duration-[2000ms] ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
+      style={{ borderRadius: "4%" }}
     >
-      <div className="flex items-center justify-center gap-18 py-16 px-16">
+      <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:gap-[4.5rem] p-6 sm:p-10 md:p-12 lg:p-16">
         {VIDEOS.map((src, i) => (
           <div
             key={i}
-            className="relative overflow-hidden flex-1 rounded-[32px] shadow-[0_24px_70px_rgba(15,23,42,0.55)]"
+            className="relative overflow-hidden flex-1 min-w-0"
             style={{
-              maxWidth: "260px",
+              maxWidth: "min(260px, 24%)",
               aspectRatio: "816 / 1692",
+              borderRadius: "8%",
             }}
           >
             <video
