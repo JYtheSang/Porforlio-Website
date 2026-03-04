@@ -13,17 +13,6 @@ export default function SAPCopilot() {
   return (
     <main className="pb-24">
 
-      {/* Back nav */}
-      <div className="max-w-[800px] mx-auto px-6 pt-10 pb-6">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#a1a1aa] hover:text-[#fafafa] transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          Back
-        </a>
-      </div>
-
       {/* Images stacked with no gap */}
       <div className="max-w-[1250px] mx-auto px-6">
         <div className="w-full overflow-hidden rounded-2xl">

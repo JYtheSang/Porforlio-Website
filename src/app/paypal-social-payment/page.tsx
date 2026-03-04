@@ -121,7 +121,7 @@ function PayPalCover() {
             <div className="flex-1">
               <div
                 className="flex flex-col gap-3"
-                style={{ animation: "scroll-up 60s linear infinite" }}
+                style={{ animation: "scroll-up 90s linear infinite" }}
               >
                 {col1Screens.map((src, i) => (
                   <img key={i} src={src} alt="" className="w-full rounded-2xl" />
@@ -133,7 +133,7 @@ function PayPalCover() {
             <div className="flex-1">
               <div
                 className="flex flex-col gap-3"
-                style={{ marginTop: "20%", animation: "scroll-up 60s linear infinite", animationDelay: "-12s" }}
+                style={{ marginTop: "20%", animation: "scroll-up 70s linear infinite", animationDelay: "-12s" }}
               >
                 {col2Screens.map((src, i) => (
                   <img key={i} src={src} alt="" className="w-full rounded-2xl" />
@@ -151,17 +151,6 @@ function PayPalCover() {
 export default function PayPalSocialPayment() {
   return (
     <main className="pb-24">
-
-      {/* Back nav */}
-      <div className="max-w-[800px] mx-auto px-6 pt-10 pb-6">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#a1a1aa] hover:text-[#fafafa] transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          Back
-        </a>
-      </div>
 
       {/* Cover */}
       <div className="max-w-[1250px] mx-auto px-6">
