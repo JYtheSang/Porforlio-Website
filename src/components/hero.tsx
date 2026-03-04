@@ -17,7 +17,7 @@ export function Hero() {
           I design simple solutions to complex problems.
         </motion.span>
         <motion.span
-          className="block mt-4 text-lg text-[#94a3b8]"
+          className="block mt-4 text-2xl text-[#94a3b8]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.8, ease }}
