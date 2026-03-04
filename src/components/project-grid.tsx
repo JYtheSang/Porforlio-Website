@@ -6,6 +6,23 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motio
 import Image from "next/image"
 import { projects, Project, type ProjectCategory } from "@/lib/projects"
 
+const gridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0, delayChildren: 0 },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: [0.25, 0.46, 0.45, 0.94] as const },
+  },
+}
+
 const CURSOR_OFFSET_X = 8
 const CARD_HEIGHT_EST = 140
 const CARD_WIDTH = 280
@@ -47,40 +64,47 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
 
   return (
     <>
-      <div className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5">
-          {filteredProjects.map((project) => (
-            <a
-              key={project.title}
-              href={project.href}
-              {...(!project.href.startsWith("/") && { target: "_blank", rel: "noopener noreferrer" })}
-              className="block"
-              onMouseEnter={() => setHoveredProject(project)}
-              onMouseLeave={() => setHoveredProject(null)}
-            >
-              <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={800}
-                  height={533}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex items-center justify-between px-1 mb-1">
-                <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
-                  {project.title}
-                </span>
-                <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
-                  {project.year}
-                </span>
-              </div>
-              <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
-                {project.action}
-              </p>
-            </a>
-          ))}
-        </div>
+      <motion.div
+        key={category ?? "all"}
+        className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5"
+        variants={gridVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {filteredProjects.map((project) => (
+          <motion.a
+            key={project.title}
+            href={project.href}
+            {...(!project.href.startsWith("/") && { target: "_blank", rel: "noopener noreferrer" })}
+            className="block"
+            variants={cardVariants}
+            onMouseEnter={() => setHoveredProject(project)}
+            onMouseLeave={() => setHoveredProject(null)}
+          >
+            <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={800}
+                height={533}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex items-center justify-between px-1 mb-1">
+              <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
+                {project.title}
+              </span>
+              <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
+                {project.year}
+              </span>
+            </div>
+            <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
+              {project.action}
+            </p>
+          </motion.a>
+        ))}
+      </motion.div>
 
       {mounted &&
         createPortal(

@@ -22,9 +22,31 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.8, ease }}
         >
-          Through design, code, and AI.
+          Combining design, code, and AI.
         </motion.span>
       </h1>
+      <motion.section
+        className="flex flex-col gap-1 text-sm text-[#94a3b8]/90"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.2, ease }}
+      >
+        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
+          <span>2024–Present</span>
+          <span>Georgia Tech</span>
+          <span>OMSCS</span>
+        </div>
+        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
+          <span className="w-[77px]">2019–2024</span>
+          <span>PayPal</span>
+          <span>Senior Product Designer</span>
+        </div>
+        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
+          <span>2016–2019</span>
+          <span>SAP Labs</span>
+          <span>UX Design Specialist</span>
+        </div>
+      </motion.section>
     </header>
   )
 }
