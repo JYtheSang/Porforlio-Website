@@ -42,22 +42,6 @@ export default function ML4T() {
           </div>
         </div>
 
-        {/* ── Metrics Bar ── */}
-        <div className="bg-[#17181c] border border-[#2a2d36] rounded-xl grid grid-cols-2 md:grid-cols-4 overflow-hidden my-16">
-          {[
-            { value: "+43.3%", color: "text-[#34d399]", label: "Manual Strategy Return", sub: "vs +1.0% benchmark (in-sample)" },
-            { value: "+1.95%", color: "text-[#34d399]", label: "Out-of-Sample Return", sub: "vs −8.53% benchmark" },
-            { value: "22.5%", color: "text-[#6c8eff]", label: "Volatility Reduction", sub: "daily std dev vs benchmark" },
-            { value: "18 / 18", color: "text-[#6c8eff]", label: "Tests Passed", sub: "DT · RT · Bag Learner suite" },
-          ].map((m, i) => (
-            <div key={i} className={`p-7 ${i > 0 ? "border-l border-[#2a2d36] max-md:border-l-0 max-md:border-t" : ""}`}>
-              <div className={`text-3xl font-bold font-mono tracking-tight mb-1 ${m.color}`}>{m.value}</div>
-              <div className="text-[11px] uppercase tracking-widest text-[#7b7f8f] mb-1">{m.label}</div>
-              <div className="text-[11px] text-[#7b7f8f]">{m.sub}</div>
-            </div>
-          ))}
-        </div>
-
         {/* ── Section: Overview ── */}
         <section id="overview" className="py-16 border-b border-[#2a2d36]">
           <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">01 — Overview</div>
@@ -300,6 +284,28 @@ export default function ML4T() {
             </div>
           </div>
         </section>
+
+        {/* ── Section: Takeaways ── */}
+        <div className="pt-16">
+          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">04 — Takeaways</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-10">What this taught me</h2>
+          <div className="flex flex-col gap-6">
+            {[
+              { strong: "Building learners from scratch reveals the math behind ML.", body: " Implementing DTLearner, RTLearner, and BagLearner without scikit-learn deepened my understanding of splitting criteria, variance reduction, and ensemble methods. The flat-array tree representation was a nice efficiency win." },
+              { strong: "Technical indicators need empirical tuning.", body: " Each indicator (Bollinger Bands, momentum, PPO) was calibrated against JPM data. What works for one asset may not generalize; exploratory analysis and validation splits are essential." },
+              { strong: "Out-of-sample performance matters more than in-sample.", body: " The real test was 2010–2011. Both manual and ML strategies beat buy-and-hold, but OOS returns were modest compared to in-sample — a reminder that backtest results can be optimistic." },
+              { strong: "Market impact and commissions change the game.", body: " The Strategy Learner adapted to higher friction by trading less frequently. Ignoring transaction costs would have overstated returns; modeling them upfront made the evaluation realistic." },
+            ].map((t, i) => (
+              <div key={i} className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-[#6c8eff] mt-[7px]" />
+                <p className="text-[15px] text-[#7b7f8f] leading-7">
+                  <strong className="text-[#fafafa] font-semibold">{t.strong}</strong>
+                  {t.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
       </div>
     </main>
