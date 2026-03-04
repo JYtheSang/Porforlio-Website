@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ArrowLeft, ArrowUpRight } from "lucide-react"
 import { AnimatedSectionImage } from "@/components/animated-section-image"
+import { AnimatedSectionVideos } from "@/components/animated-section-videos"
 
 export const metadata: Metadata = {
   title: "PayPal Social Payment — Jie Yang",
@@ -187,13 +188,17 @@ export default function PayPalSocialPayment() {
         <div key={section.id} className="mt-20">
           {/* Section image */}
           <div className="max-w-[1250px] mx-auto px-6">
-            <AnimatedSectionImage
-              src={section.image}
-              alt={section.title}
-              width={1600}
-              height={900}
-              loading="lazy"
-            />
+            {section.id === "emojis-themes" ? (
+              <AnimatedSectionVideos />
+            ) : (
+              <AnimatedSectionImage
+                src={section.image}
+                alt={section.title}
+                width={1600}
+                height={900}
+                loading="lazy"
+              />
+            )}
           </div>
 
           {/* Section text */}
