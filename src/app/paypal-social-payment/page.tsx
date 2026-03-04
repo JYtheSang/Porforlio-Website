@@ -56,6 +56,98 @@ const sections = [
   },
 ]
 
+const col1Screens = [
+  "/projects/paypal/Image 1.png",
+  "/projects/paypal/Image 2.png",
+  "/projects/paypal/Image 3.png",
+  "/projects/paypal/Image 4.png",
+  "/projects/paypal/Image 5.png",
+  "/projects/paypal/Image 6.png",
+  // duplicate sequence for seamless looping
+  "/projects/paypal/Image 1.png",
+  "/projects/paypal/Image 2.png",
+  "/projects/paypal/Image 3.png",
+  "/projects/paypal/Image 4.png",
+  "/projects/paypal/Image 5.png",
+  "/projects/paypal/Image 6.png",
+]
+
+const col2Screens = [
+  "/projects/paypal/Image 7.png",
+  "/projects/paypal/Image 8.png",
+  "/projects/paypal/Image 10.png",
+  "/projects/paypal/Image 11.png",
+  "/projects/paypal/Image 12.png",
+  // duplicate sequence for seamless looping
+  "/projects/paypal/Image 7.png",
+  "/projects/paypal/Image 8.png",
+  "/projects/paypal/Image 10.png",
+  "/projects/paypal/Image 11.png",
+  "/projects/paypal/Image 12.png",
+]
+
+function PayPalCover() {
+  return (
+    <div className="w-full rounded-2xl overflow-hidden bg-[#0079fc] text-white" style={{ aspectRatio: "16/9" }}>
+      <div className="w-full h-full flex">
+
+        {/* Left: text */}
+        <div className="flex flex-col justify-between p-10 md:p-14" style={{ width: "55%" }}>
+          <p className="text-sm font-semibold tracking-wide">Paypal | Jie Yang</p>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-[32px] font-bold tracking-tight leading-none">
+              Social Payments
+            </h2>
+            <p className="text-base font-normal max-w-md">
+              Transforming transactions into social moments
+            </p>
+          </div>
+          <p className="text-sm font-semibold tracking-wide">2019–2024 | Senior Product Designer</p>
+        </div>
+
+        {/* Right: scrolling phone screens */}
+        <div className="relative overflow-hidden flex-1">
+          {/* fade mask top + bottom */}
+          <div
+            className="absolute inset-0 z-10 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0,121,252,0.25) 0%, transparent 10%, transparent 90%, rgba(0,121,252,0.25) 100%)",
+            }}
+          />
+
+          <div className="flex gap-3 h-full px-3 pt-6">
+            {/* Column 1 */}
+            <div className="flex-1">
+              <div
+                className="flex flex-col gap-3"
+                style={{ animation: "scroll-up 60s linear infinite" }}
+              >
+                {col1Screens.map((src, i) => (
+                  <img key={i} src={src} alt="" className="w-full rounded-2xl" />
+                ))}
+              </div>
+            </div>
+
+            {/* Column 2 — offset downward and phase-shifted */}
+            <div className="flex-1">
+              <div
+                className="flex flex-col gap-3"
+                style={{ marginTop: "20%", animation: "scroll-up 60s linear infinite", animationDelay: "-12s" }}
+              >
+                {col2Screens.map((src, i) => (
+                  <img key={i} src={src} alt="" className="w-full rounded-2xl" />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
 export default function PayPalSocialPayment() {
   return (
     <main className="pb-24">
@@ -71,18 +163,9 @@ export default function PayPalSocialPayment() {
         </a>
       </div>
 
-      {/* Cover image */}
+      {/* Cover */}
       <div className="max-w-[1250px] mx-auto px-6">
-        <div className="w-full rounded-2xl overflow-hidden bg-[#1a1a2e]">
-          <Image
-            src="/projects/paypal/cover.png"
-            alt="PayPal Social Payment"
-            width={1600}
-            height={900}
-            className="w-full h-auto"
-            priority
-          />
-        </div>
+        <PayPalCover />
       </div>
 
       {/* Intro */}
