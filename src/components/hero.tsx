@@ -47,6 +47,18 @@ export function Hero() {
           <span>UX Design Specialist</span>
         </div>
       </motion.section>
+      <motion.div
+        className="mt-2 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.16em] uppercase text-[#a1a1aa]"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.4, ease }}
+      >
+        <span className="relative flex h-2.5 w-2.5 items-center justify-center">
+          <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400/70 animate-ping" />
+          <span className="relative inline-flex h-[9px] w-[9px] rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(16,185,129,0.35)]" />
+        </span>
+        <span>Available for work</span>
+      </motion.div>
     </header>
   )
 }
