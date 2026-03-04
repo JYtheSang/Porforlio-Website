@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobCompare6300 — Technical Overview</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface-2: #22263a;
+      --border: #2e3250;
+      --accent: #6c8ef5;
+      --accent-2: #a78bfa;
+      --accent-3: #34d399;
+      --text: #e2e8f0;
+      --text-muted: #8b92b8;
+      --danger: #f87171;
+      --warning: #fbbf24;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-child { border-bottom: none; }
+
+    /* ── Hero ── */
+    #hero {
+      padding: 7rem 0 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(108, 142, 245, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(108, 142, 245, 0.3);
+      border-radius: 100px;
+      padding: 0.25rem 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+    h1 span { color: var(--accent); }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin-bottom: 2.5rem;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .meta-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+    .meta-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .section-intro {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    /* ── Video placeholder ── */
+    .video-placeholder {
+      background: var(--surface);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .video-placeholder .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(108, 142, 245, 0.1);
+      border: 1px solid rgba(108, 142, 245, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .video-placeholder p { font-size: 0.875rem; }
+    .video-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ── Screen flow ── */
+    .screen-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px;
+      background: var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .screen-step {
+      background: var(--surface);
+      flex: 1 1 150px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+    }
+    .screen-step .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(108, 142, 245, 0.12);
+      border: 1px solid rgba(108, 142, 245, 0.3);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .screen-step .screen-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+    .screen-step p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Architecture ── */
+    .arch-layer {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1rem;
+      align-items: start;
+      margin-bottom: 1rem;
+    }
+    .arch-label-cell {
+      padding: 0.75rem;
+      background: rgba(108, 142, 245, 0.07);
+      border: 1px solid rgba(108, 142, 245, 0.2);
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .arch-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .arch-chip {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--text);
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    }
+
+    /* ── Scoring formula ── */
+    .formula-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      line-height: 1.9;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    .formula-box .comment {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ── Team grid ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .team-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .team-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .role-tag {
+      display: inline-block;
+      background: rgba(52, 211, 153, 0.1);
+      color: var(--accent-3);
+      border: 1px solid rgba(52, 211, 153, 0.2);
+      border-radius: 100px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin: 0.15rem 0.1rem 0 0;
+    }
+
+    /* ── Use case list ── */
+    .use-case-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .use-case-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+    .uc-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(108, 142, 245, 0.1);
+      border: 1px solid rgba(108, 142, 245, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .uc-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+    .uc-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Constraints ── */
+    .constraint-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .constraint-row:last-child { border-bottom: none; }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Tech stack pills ── */
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .tech-pill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ── DB schema ── */
+    .db-table {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .db-table-header {
+      background: rgba(108, 142, 245, 0.08);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+    .db-row {
+      display: grid;
+      grid-template-columns: 1fr 0.6fr 2fr;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+    .db-row:last-child { border-bottom: none; }
+    .db-col { color: var(--text); }
+    .db-type { color: var(--warning); }
+    .db-note { color: var(--text-muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+      .arch-layer { grid-template-columns: 1fr; }
+      .arch-label-cell { text-align: left; }
+      .db-row { grid-template-columns: 1fr 0.6fr; }
+      .db-note { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">JobCompare6300</span>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="badge">CS 6300 · Spring 2025 · Team 129</div>
+    <h1>Job<span>Compare</span>6300</h1>
+    <p class="subtitle">
+      Android app built in Java. Layered architecture with SQLite persistence, singleton domain objects, cost-of-living salary normalization, and a configurable weighted scoring engine.
+    </p>
+    <div class="meta-row">
+      <div class="meta-item">
+        <span class="meta-label">Language</span>
+        <span class="meta-value">Java 17</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Target SDK</span>
+        <span class="meta-value">Android API 34</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Storage</span>
+        <span class="meta-value">SQLite (on-device)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">UI</span>
+        <span class="meta-value">Material Design Components</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Build</span>
+        <span class="meta-value">Gradle</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEMO ── -->
+<section id="demo">
+  <div class="container">
+    <p class="section-label">Demo</p>
+    <h2>App Walkthrough</h2>
+    <p class="section-intro">A short video walkthrough of the full user flow — from adding a current job to viewing the comparison table.</p>
+
+    <!-- VIDEO PLACEHOLDER — replace the div below with your <video> or <iframe> tag -->
+    <div class="video-placeholder">
+      <div class="icon">▶</div>
+      <p><strong>Video demo coming soon</strong></p>
+      <p>Replace this block with your &lt;video&gt; or YouTube &lt;iframe&gt;</p>
+    </div>
+    <!-- END VIDEO PLACEHOLDER -->
+
+    <p class="video-caption">Full app demo &mdash; JobCompare6300 on Android Emulator, Spring 2025</p>
+  </div>
+</section>
+
+<!-- ── SCREEN FLOW ── -->
+<section id="screens">
+  <div class="container">
+    <p class="section-label">UI Flow</p>
+    <h2>Activity Navigation</h2>
+    <p class="section-intro">Six Activities. All navigation routes back through <code>MainMenu</code>. The Compare Jobs button is conditionally enabled based on a data count check at runtime.</p>
+
+    <div class="screen-flow">
+      <div class="screen-step">
+        <div class="step-num">1</div>
+        <div class="screen-name">MainMenu.java</div>
+        <p>Launches each Activity via <code>Intent</code>. Queries job count to enable/disable Compare button.</p>
+      </div>
+      <div class="screen-step">
+        <div class="step-num">2</div>
+        <div class="screen-name">current_job_activity</div>
+        <p>Pre-populates form from DB if a current job exists. Writes to <code>jobs</code> table on save.</p>
+      </div>
+      <div class="screen-step">
+        <div class="step-num">3</div>
+        <div class="screen-name">job_offer_activity</div>
+        <p>Inserts new row into <code>jobs</code> table. Optionally launches compare result directly.</p>
+      </div>
+      <div class="screen-step">
+        <div class="step-num">4</div>
+        <div class="screen-name">comparison_settings</div>
+        <p>Reads/writes the single row in <code>comparison_settings</code> table via <code>ComparisonSettings</code> singleton.</p>
+      </div>
+      <div class="screen-step">
+        <div class="step-num">5</div>
+        <div class="screen-name">compare_jobs</div>
+        <p>Calls <code>JobComparison.getRankedJobs()</code> to sort and display. Passes two selected IDs to result.</p>
+      </div>
+      <div class="screen-step">
+        <div class="step-num">6</div>
+        <div class="screen-name">compare_result</div>
+        <p>Reads <code>ComparisonData</code> from singleton. Renders a 10-field comparison table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ARCHITECTURE ── -->
+<section id="architecture">
+  <div class="container">
+    <p class="section-label">Architecture</p>
+    <h2>App Structure</h2>
+    <p class="section-intro">
+      Three layers: Activities own UI and navigation logic, domain Classes hold business logic and are accessed as singletons, and Database helpers wrap SQLite via <code>SQLiteOpenHelper</code>.
+    </p>
+
+    <!-- Layer diagram -->
+    <div style="margin-bottom:2rem;">
+      <div class="arch-layer">
+        <div class="arch-label-cell">UI Layer</div>
+        <div class="arch-items">
+          <span class="arch-chip">MainMenu.java</span>
+          <span class="arch-chip">current_job_activity.java</span>
+          <span class="arch-chip">job_offer_activity.java</span>
+          <span class="arch-chip">comparison_settings.java</span>
+          <span class="arch-chip">compare_jobs.java</span>
+          <span class="arch-chip">compare_result.java</span>
+        </div>
+      </div>
+      <div class="arch-layer">
+        <div class="arch-label-cell">Domain Layer</div>
+        <div class="arch-items">
+          <span class="arch-chip">Job.java</span>
+          <span class="arch-chip">JobComparison.java</span>
+          <span class="arch-chip">ComparisonSettings.java</span>
+          <span class="arch-chip">ComparisonData (inner)</span>
+        </div>
+      </div>
+      <div class="arch-layer">
+        <div class="arch-label-cell">Data Layer</div>
+        <div class="arch-items">
+          <span class="arch-chip">JobDatabase.java</span>
+          <span class="arch-chip">JobDatabaseHelper.java</span>
+          <span class="arch-chip">ComparisonSettingsDatabaseHelper.java</span>
+          <span class="arch-chip">SQLite (on-device)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Class descriptions -->
+    <h3 style="margin-bottom:1rem;">Domain Classes</h3>
+    <div class="card-grid" style="margin-bottom:2rem;">
+      <div class="card">
+        <h3 style="color:var(--accent);font-family:monospace;">Job.java</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);">
+          Plain Java model. Exposes computed getters alongside raw fields:
+          <code>calculateAdjustedYearlySalary()</code> and <code>calculateAdjustedYearlyBonus()</code>
+          apply the CoL index; <code>calculateHealthInsurance()</code> adds 2% of adjusted salary;
+          <code>calculateEmployeeDiscount()</code> clamps the value to <code>min(input, 0.18 × salary)</code>.
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--accent);font-family:monospace;">JobComparison.java</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);">
+          Application-scoped singleton (<code>getInstance(Context)</code>). Accepts a job list and
+          a weight list via setters. <code>rankJobs()</code> builds an index list then sorts it by
+          score using <code>Comparator.comparingDouble(...).reversed()</code>.
+          <code>compareJobs()</code> populates an inner <code>ComparisonData</code> POJO shared to the result Activity.
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--accent);font-family:monospace;">ComparisonSettings.java</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);">
+          Application-scoped singleton. Wraps <code>ComparisonSettingsDatabaseHelper</code>.
+          On first instantiation, checks row count — inserts default row (all weights = 1) if empty.
+          Exposes <code>getSettings()</code> returning an <code>ArrayList&lt;Integer&gt;</code> from a <code>Cursor</code>.
+        </p>
+      </div>
+    </div>
+
+    <!-- DB schema -->
+    <h3 style="margin-bottom:1rem;">Database Schema</h3>
+
+    <div class="db-table">
+      <div class="db-table-header">TABLE: jobs</div>
+      <div class="db-row"><span class="db-col">id</span><span class="db-type">INTEGER PK</span><span class="db-note">Auto-increment</span></div>
+      <div class="db-row"><span class="db-col">is_current_job</span><span class="db-type">INTEGER</span><span class="db-note">Boolean flag (0/1)</span></div>
+      <div class="db-row"><span class="db-col">title, company, location</span><span class="db-type">TEXT</span><span class="db-note">Job identifiers</span></div>
+      <div class="db-row"><span class="db-col">cost_of_living</span><span class="db-type">INTEGER</span><span class="db-note">Index used for salary adjustment</span></div>
+      <div class="db-row"><span class="db-col">yearly_salary, yearly_bonus</span><span class="db-type">REAL</span><span class="db-note">Pre-adjustment raw values</span></div>
+      <div class="db-row"><span class="db-col">tuition_reimbursement</span><span class="db-type">REAL</span><span class="db-note">Annual cap</span></div>
+      <div class="db-row"><span class="db-col">health_insurance</span><span class="db-type">REAL</span><span class="db-note">Annual premium + 2% of adj. salary</span></div>
+      <div class="db-row"><span class="db-col">employee_discount</span><span class="db-type">REAL</span><span class="db-note">Capped at 18% of yearly salary</span></div>
+      <div class="db-row"><span class="db-col">child_adoption_assistance</span><span class="db-type">REAL</span><span class="db-note">Annual benefit</span></div>
+    </div>
+
+    <div class="db-table">
+      <div class="db-table-header">TABLE: comparison_settings</div>
+      <div class="db-row"><span class="db-col">salary_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+      <div class="db-row"><span class="db-col">bonus_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+      <div class="db-row"><span class="db-col">tuition_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+      <div class="db-row"><span class="db-col">health_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+      <div class="db-row"><span class="db-col">discount_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+      <div class="db-row"><span class="db-col">adoption_weight</span><span class="db-type">INTEGER</span><span class="db-note">Default: 1</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SCORING ── -->
+<section id="scoring">
+  <div class="container">
+    <p class="section-label">Scoring Formula</p>
+    <h2>Weighted Scoring Implementation</h2>
+    <p class="section-intro">
+      <code>calculateScore(Job)</code> in <code>JobComparison.java</code> computes a double score per job.
+      Each term divides its weight by 9 (max weight) so the scale is invariant to the absolute weight values.
+    </p>
+
+    <div class="formula-box">
+      <span class="comment">// Weighted Job Score</span><br>
+      score =<br>
+      &nbsp;&nbsp;(salaryWeight / 9)  &times; adjustedYearlySalary<br>
+      + (bonusWeight / 9)  &times; adjustedYearlyBonus<br>
+      + (tuitionWeight / 9)  &times; tuitionReimbursement<br>
+      + (healthWeight / 9)  &times; (healthInsurance + adjustedSalary &times; 0.02)<br>
+      + (discountWeight / 9)  &times; employeeDiscount<br>
+      + (adoptionWeight / 9)  &times; (childAdoptionAssistance / 5)<br><br>
+      <span class="comment">// Cost-of-living adjustment applied to salary and bonus</span><br>
+      adjustedSalary = yearlySalary &times; (100 / costOfLivingIndex)<br>
+      adjustedBonus  = yearlyBonus  &times; (100 / costOfLivingIndex)
+    </div>
+
+    <p style="font-size:0.85rem;color:var(--text-muted);">
+      <code>rankJobs()</code> builds a parallel index list, sorts it with <code>Comparator.comparingDouble(scores::get).reversed()</code>, then writes sorted <code>Job</code> objects into <code>rankedJobs</code>. The <code>isCurrentJob</code> flag on the model drives the label in the list adapter.
+    </p>
+  </div>
+</section>
+
+<!-- ── USE CASES ── -->
+<section id="features">
+  <div class="container">
+    <p class="section-label">Features</p>
+    <h2>Implemented Functionality</h2>
+    <p class="section-intro">Five functional areas, each mapping to one or more Activities and domain methods.</p>
+
+    <div class="use-case-list">
+      <div class="use-case-item">
+        <div class="uc-num">1</div>
+        <div>
+          <div class="uc-title">Current Job — Enter &amp; Edit</div>
+          <div class="uc-desc"><code>current_job_activity</code> loads existing data via <code>JobDatabaseHelper.getCurrentJob()</code> on launch and pre-fills all 10 fields. On save, client-side validation runs before calling <code>insert()</code> or <code>update()</code> depending on whether a record already exists.</div>
+        </div>
+      </div>
+      <div class="use-case-item">
+        <div class="uc-num">2</div>
+        <div>
+          <div class="uc-title">Job Offers — Insert &amp; Shortcut Compare</div>
+          <div class="uc-desc"><code>job_offer_activity</code> always inserts a new row (<code>isCurrentJob = false</code>). After a successful save, the activity checks for an existing current job; if found, it enables an inline "Compare with Current Job" button that launches <code>compare_result</code> directly.</div>
+        </div>
+      </div>
+      <div class="use-case-item">
+        <div class="uc-num">3</div>
+        <div>
+          <div class="uc-title">Comparison Settings — Persistent Weights</div>
+          <div class="uc-desc"><code>comparison_settings</code> reads the singleton's weight array into six input fields. On save, each field is validated as an integer in [1, 9] before <code>ComparisonSettings.setSettings(...)</code> writes the updated row to SQLite.</div>
+        </div>
+      </div>
+      <div class="use-case-item">
+        <div class="uc-num">4</div>
+        <div>
+          <div class="uc-title">Ranked Job List</div>
+          <div class="uc-desc"><code>compare_jobs</code> fetches all jobs from <code>JobDatabaseHelper</code>, passes them and the current weights into <code>JobComparison.setJobList()</code> and <code>setSettings()</code>, then calls <code>getRankedJobs()</code>. The result drives a <code>ListView</code> adapter that marks the current job entry.</div>
+        </div>
+      </div>
+      <div class="use-case-item">
+        <div class="uc-num">5</div>
+        <div>
+          <div class="uc-title">Side-by-Side Comparison Table</div>
+          <div class="uc-desc"><code>compare_result</code> calls <code>JobComparison.compareJobs(jobA, jobB)</code>, then reads the populated <code>ComparisonData</code> POJO to fill a 10-row table: Title, Company, Location, Adj. Salary, Adj. Bonus, Tuition, Health Insurance, Employee Discount, Child Adoption Assistance, Job Score.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONSTRAINTS ── -->
+<section id="constraints">
+  <div class="container">
+    <p class="section-label">Implementation Notes</p>
+    <h2>Validation &amp; Edge Cases</h2>
+    <p class="section-intro">Input constraints are enforced at the Activity layer before any write to SQLite.</p>
+
+    <div class="card" style="margin-bottom:1.5rem;">
+      <div class="constraint-row"><div class="dot"></div><span>Employee discount is silently clamped to <code>min(input, 0.18 × yearlySalary)</code> in the <code>Job</code> constructor</span></div>
+      <div class="constraint-row"><div class="dot"></div><span>Health insurance stored as the raw premium; the 2% salary surcharge is computed at score time via <code>calculateHealthInsurance()</code></span></div>
+      <div class="constraint-row"><div class="dot"></div><span>Weights validated as integers in [1, 9] before the settings <code>UPDATE</code> is issued</span></div>
+      <div class="constraint-row"><div class="dot"></div><span>Compare Jobs button state is recalculated in <code>MainMenu.onResume()</code> — queries <code>JobDatabaseHelper</code> for offer count and current-job flag</span></div>
+      <div class="constraint-row"><div class="dot"></div><span>Child adoption assistance term divided by 5 in the score formula to normalize its scale relative to other monetary fields</span></div>
+      <div class="constraint-row"><div class="dot"></div><span><code>ComparisonSettings</code> and <code>JobComparison</code> use <code>synchronized getInstance(Context)</code> — safe for single-threaded Activity lifecycle but protects against accidental double-init</span></div>
+    </div>
+
+    <h3 style="margin-bottom:0.75rem;">Tech Stack</h3>
+    <div class="tech-row">
+      <span class="tech-pill">Android SDK 34</span>
+      <span class="tech-pill">Java 17</span>
+      <span class="tech-pill">SQLite / SQLiteOpenHelper</span>
+      <span class="tech-pill">Material Design Components</span>
+      <span class="tech-pill">Gradle</span>
+      <span class="tech-pill">JUnit / Espresso</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section id="team">
+  <div class="container">
+    <p class="section-label">Team</p>
+    <h2>The People Behind It</h2>
+    <p class="section-intro">Team 129 &mdash; Georgia Tech CS 6300, Spring 2025.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">JY</div>
+        <div class="team-name">Jie Yang</div>
+        <span class="role-tag">Front-End Engineer</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">MC</div>
+        <div class="team-name">Michael Chen</div>
+        <span class="role-tag">Back-End Engineer</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SM</div>
+        <div class="team-name">Snigdha Majeti</div>
+        <span class="role-tag">Project Manager</span>
+        <span class="role-tag">Back-End Engineer</span>
+        <span class="role-tag">Reviewer</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">SP</div>
+        <div class="team-name">Srikanta Patra</div>
+        <span class="role-tag">Back-End Engineer</span>
+        <span class="role-tag">Tester</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer style="padding:2rem 0;border-top:1px solid var(--border);text-align:center;">
+  <div class="container">
+    <p style="font-size:0.8rem;color:var(--text-muted);">JobCompare6300 &mdash; CS 6300 Software Development Process &mdash; Georgia Tech &mdash; Spring 2025</p>
+  </div>
+</footer>
+
+</body>
+</html>

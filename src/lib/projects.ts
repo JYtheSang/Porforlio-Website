@@ -13,9 +13,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Solving ARC-AGI",
+    href: "/kbai",
+    image: "/projects/KBAI-thumbnail.png",
+    year: "2024",
+    action: "View Case Study",
+    description: "Built a Knowledge-Based Agent that Solves Visual Reasoning Puzzles",
+    tags: ["Georgia Tech", "Python", "KBAI"],
+    category: "Engineering",
+  },
+  {
     title: "ML-Driven Algorithmic Trading",
     href: "/ml4t",
-    image: "/projects/ml4t-thumb.png",
+    image: "/projects/ML4T.png",
     year: "2024",
     action: "View Case Study",
     description: "Built an ML Trading Pipeline from Scratch",
