@@ -37,13 +37,13 @@ export function Hero() {
           <span>OMSCS</span>
         </div>
         <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
-          <span className="w-[77px]">2019–2024</span>
-          <span>PayPal</span>
+          <span className="w-[84px]">2019–2024</span>
+          <span className="w-[77px]">PayPal</span>
           <span>Senior Product Designer</span>
         </div>
         <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
-          <span>2016–2019</span>
-          <span>SAP Labs</span>
+          <span className="w-[84px]">2016–2019</span>
+          <span className="w-[77px]">SAP Labs</span>
           <span>UX Design Specialist</span>
         </div>
       </motion.section>
