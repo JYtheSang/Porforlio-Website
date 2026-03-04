@@ -6,30 +6,21 @@ const ease = [0.4, 0, 0.2, 1] as const
 
 export function Hero() {
   return (
-    <header className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-8 pb-14 flex flex-col gap-6">
-      <h1 className="text-5xl md:text-[38px] sm:text-3xl font-medium tracking-[-0.5px] leading-[58px] md:leading-12 sm:leading-9 text-[#fafafa] max-w-3xl">
-      <motion.span
-          className="inline"
+    <header className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-12 pb-24 flex flex-col gap-6">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-normal text-[#fafafa] max-w-3xl">
+        <motion.span
+          className="inline w-[500px] leading-[81%]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.4, ease }}
         >
-          Hi, I'm Jie Yang.
-          <br />
-        </motion.span>
-        <motion.span
-          className="inline"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.8, ease }}
-        >
           I design simple solutions to complex problems.
         </motion.span>
         <motion.span
-          className="block mt-2 text-[#94a3b8]"
+          className="block mt-4 text-lg text-[#94a3b8]"
           initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 1.2, ease }}
+          transition={{ duration: 1.5, delay: 0.8, ease }}
         >
           Through design, code, and AI.
         </motion.span>
