@@ -20,7 +20,7 @@ export const projects: Project[] = [
   },
   {
     title: "SAP Copilot",
-    href: "https://www.jieyangdesign.com/pinterest-explorer-ux-strategy-1/",
+    href: "/sap-copilot",
     image: "/projects/sap-copilot.png",
     year: "2018",
     action: "View Case Study",
