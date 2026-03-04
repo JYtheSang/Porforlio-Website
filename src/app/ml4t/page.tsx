@@ -36,7 +36,7 @@ export default function ML4T() {
             <strong className="text-[#34d399]">+42 percentage points</strong> in-sample.
           </p>
           <div className="flex flex-wrap gap-2.5">
-            {["Georgia Tech · CS 7646", "Python · NumPy · pandas", "Machine Learning"].map((t) => (
+            {["Python · NumPy · pandas", "Machine Learning"].map((t) => (
               <span key={t} className="bg-[#1e2026] border border-[#2a2d36] rounded px-3 py-1.5 text-[12px] font-mono text-[#7b7f8f]">{t}</span>
             ))}
           </div>
@@ -298,18 +298,6 @@ export default function ML4T() {
                 ToC vs Benchmark: with perfect foresight, the same capital grows 57× over the same period.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* ── Section: Stack ── */}
-        <section id="stack" className="py-16">
-          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">05 — Stack</div>
-          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-3">Tools &amp; technologies</h2>
-          <p className="text-[#7b7f8f] mb-6">All core algorithms were implemented from scratch. External libraries were limited to data manipulation and plotting.</p>
-          <div className="flex flex-wrap gap-2.5">
-            {["Python 3", "NumPy", "pandas", "matplotlib", "Decision Tree (from scratch)", "Random Tree (from scratch)", "Bootstrap Aggregation", "Bollinger Bands", "Momentum", "SMA / EMA", "PPO", "Portfolio Simulation", "Backtesting"].map((s) => (
-              <span key={s} className="bg-[#1e2026] border border-[#2a2d36] rounded-full text-[13px] font-mono text-[#fafafa] px-4 py-1.5">{s}</span>
-            ))}
           </div>
         </section>
 

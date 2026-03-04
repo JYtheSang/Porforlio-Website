@@ -216,9 +216,6 @@ export default function KBAI() {
 
         {/* ── Hero ── */}
         <div className="pb-16 border-b border-[#2a2d36]">
-          <div className="inline-block text-[11px] font-semibold tracking-widest uppercase text-[#3b82f6] bg-[#1e2026] border border-[#2a2d36] px-3 py-1 rounded mb-6">
-            Case Study
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-[#fafafa] mb-5">
             Solving ARC-AGI<br />
             <span className="text-[#6c8eff]">Without Neural Networks</span>
@@ -229,20 +226,9 @@ export default function KBAI() {
             from just 3–4 examples and solves unseen test grids — reaching{" "}
             <strong className="text-[#34d399]">97.96% accuracy</strong> on the final milestone.
           </p>
-          {/* Meta grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-[#2a2d36]">
-            {[
-              { label: "Course", value: "CS7637 — KBAI, Georgia Tech" },
-              { label: "Language", value: "Python 3" },
-              { label: "Benchmark", value: "ARC-AGI (François Chollet)" },
-              { label: "Result", value: "48 / 49 problems solved" },
-            ].map((m) => (
-              <div key={m.label}>
-                <div className="text-[10px] font-semibold tracking-widest uppercase text-[#52525b] mb-1.5">
-                  {m.label}
-                </div>
-                <div className="text-sm font-medium text-[#a1a1aa]">{m.value}</div>
-              </div>
+          <div className="flex flex-wrap gap-2.5">
+            {["Python", "Artificial intelligence"].map((t) => (
+              <span key={t} className="bg-[#1e2026] border border-[#2a2d36] rounded px-3 py-1.5 text-[12px] font-mono text-[#7b7f8f]">{t}</span>
             ))}
           </div>
         </div>
@@ -287,21 +273,6 @@ export default function KBAI() {
             Problem <code className="text-[#52525b]">ed36ccf7</code> from the Final milestone.
             The rule is a matrix transpose — inferred from examples alone.
           </p>
-
-          {/* Callout */}
-          <div className="bg-[#0f1a2e] border border-[#1e3a5f] rounded-xl p-7">
-            <div className="text-[10px] font-bold tracking-widest uppercase text-[#3b82f6] mb-2">
-              Why this is hard
-            </div>
-            <p className="text-sm text-[#7b9cbf] leading-relaxed">
-              Most AI systems generalize across <em>millions</em> of examples. ARC gives you{" "}
-              <strong className="text-[#a8c4e0]">3 to 4</strong>. Each problem has a unique rule —
-              rotation, mirroring, gravity, color substitution, ray tracing, topology detection —
-              and the agent must identify which rule applies and apply it correctly with{" "}
-              <strong className="text-[#a8c4e0]">zero tolerance for error</strong>.
-              Predictions must be pixel-perfect.
-            </p>
-          </div>
         </div>
 
         {/* ── Approach ── */}
@@ -356,20 +327,6 @@ export default function KBAI() {
                 <p className="text-sm text-[#7b7f8f] leading-relaxed pl-9">{tier.body}</p>
               </div>
             ))}
-          </div>
-
-          {/* Callout */}
-          <div className="bg-[#0f1a2e] border border-[#1e3a5f] rounded-xl p-7">
-            <div className="text-[10px] font-bold tracking-widest uppercase text-[#3b82f6] mb-2">
-              Key design principle
-            </div>
-            <p className="text-sm text-[#7b9cbf] leading-relaxed">
-              Every transformation model is verified against{" "}
-              <strong className="text-[#a8c4e0]">all training examples</strong> before being used
-              to predict. A model that explains 2 out of 3 training pairs is rejected. This strict
-              consistency check is what makes the agent reliable despite having no training data
-              beyond the problem itself.
-            </p>
           </div>
         </div>
 
@@ -472,20 +429,6 @@ export default function KBAI() {
               </div>
             ))}
           </div>
-
-          {/* Callout */}
-          <div className="bg-[#0f1a2e] border border-[#1e3a5f] rounded-xl p-7">
-            <div className="text-[10px] font-bold tracking-widest uppercase text-[#3b82f6] mb-2">
-              No neural network. No training data.
-            </div>
-            <p className="text-sm text-[#7b9cbf] leading-relaxed">
-              Every correct prediction came from explicit reasoning over the 3–4 examples
-              in the problem itself. The agent never saw the Final milestone problems during
-              development —{" "}
-              <strong className="text-[#a8c4e0]">all generalization was zero-shot</strong>,
-              driven entirely by the model library and the consistency verification pipeline.
-            </p>
-          </div>
         </div>
 
         {/* ── Takeaways ── */}
@@ -509,19 +452,6 @@ export default function KBAI() {
           </div>
         </div>
 
-      </div>
-
-      {/* Footer strip */}
-      <div className="max-w-[900px] mx-auto px-6 mt-20 pt-8 border-t border-[#2a2d36] flex items-center justify-between flex-wrap gap-4">
-        <p className="text-xs text-[#3f3f46]">
-          CS7637 Knowledge-Based AI · Georgia Tech · ARC-AGI by François Chollet
-        </p>
-        <a
-          href="/"
-          className="text-xs font-medium text-[#3b82f6] hover:text-[#6c8eff] transition-colors"
-        >
-          Back to portfolio →
-        </a>
       </div>
 
     </main>
