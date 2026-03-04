@@ -4,17 +4,24 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion"
 import Image from "next/image"
-import { projects, Project } from "@/lib/projects"
+import { projects, Project, type ProjectCategory } from "@/lib/projects"
 
-const ease = [0.4, 0, 0.2, 1] as const
 const CURSOR_OFFSET_X = 8
 const CARD_HEIGHT_EST = 140
 const CARD_WIDTH = 280
 const VIEWPORT_PADDING = 16
 
-export function ProjectGrid() {
+export interface ProjectGridProps {
+  category?: ProjectCategory | null
+}
+
+export function ProjectGrid({ category = null }: ProjectGridProps) {
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
   const [mounted, setMounted] = useState(false)
+
+  const filteredProjects = category
+    ? projects.filter((p) => p.category === category)
+    : projects
 
   useEffect(() => setMounted(true), [])
 
@@ -40,15 +47,8 @@ export function ProjectGrid() {
 
   return (
     <>
-      <motion.section
-        id="work"
-        className="max-w-[1250px] w-full mx-auto px-6 pb-16"
-        initial={{ opacity: 0, y: 32 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4, delay: 1.6, ease }}
-      >
-        <div className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5">
-          {projects.map((project) => (
+      <div className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5">
+          {filteredProjects.map((project) => (
             <a
               key={project.title}
               href={project.href}
@@ -81,7 +81,6 @@ export function ProjectGrid() {
             </a>
           ))}
         </div>
-      </motion.section>
 
       {mounted &&
         createPortal(

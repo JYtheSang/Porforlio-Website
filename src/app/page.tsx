@@ -1,12 +1,12 @@
 import { Hero } from "@/components/hero"
-import { ProjectGrid } from "@/components/project-grid"
+import { ProjectSection } from "@/components/project-section"
 import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <ProjectGrid />
+      <ProjectSection />
       <footer
         id="footer"
         className="max-w-[1250px] w-full mx-auto px-6 md:px-24 py-16 flex flex-col items-center gap-6"

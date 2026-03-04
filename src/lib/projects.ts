@@ -1,3 +1,5 @@
+export type ProjectCategory = "Product Design" | "Engineering" | "User Research" | "Industrial Design"
+
 export interface Project {
   title: string
   href: string
@@ -6,9 +8,20 @@ export interface Project {
   action: string
   description: string
   tags: string[]
+  category: ProjectCategory
 }
 
 export const projects: Project[] = [
+  {
+    title: "ML-Driven Algorithmic Trading",
+    href: "/ml4t",
+    image: "/projects/ml4t-thumb.png",
+    year: "2024",
+    action: "View Case Study",
+    description: "Built an ML Trading Pipeline from Scratch",
+    tags: ["Georgia Tech", "Python", "ML"],
+    category: "Engineering",
+  },
   {
     title: "PayPal Social Payment",
     href: "/paypal-social-payment",
@@ -17,6 +30,7 @@ export const projects: Project[] = [
     action: "Product Design",
     description: "Lead Product Designer for PayPal's Social Payments",
     tags: ["PayPal", "Consumer", "P2P"],
+    category: "Product Design",
   },
   {
     title: "SAP Copilot",
@@ -26,6 +40,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "Designed an AI Copilot for Enterprise Workflows",
     tags: ["SAP", "Enterprise", "AI"],
+    category: "Product Design",
   },
   {
     title: "SAP Fiori for iOS",
@@ -35,6 +50,7 @@ export const projects: Project[] = [
     action: "View Gallery",
     description: "Built iOS Design Language for SAP Fiori",
     tags: ["SAP", "iOS", "Design System"],
+    category: "Product Design",
   },
   {
     title: "Pinterest Explorer",
@@ -44,6 +60,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "UX Strategy for Pinterest Discovery",
     tags: ["Pinterest", "UX Strategy", "Discovery"],
+    category: "Product Design",
   },
   {
     title: "Ryanair Adventure",
@@ -53,6 +70,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "Redesigned the Adventure Travel Experience",
     tags: ["Ryanair", "Travel", "UX"],
+    category: "Product Design",
   },
   {
     title: "Discharge Doc Evaluation",
@@ -62,6 +80,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "Evaluated Hospital Discharge Documentation",
     tags: ["Healthcare", "Research", "UX"],
+    category: "User Research",
   },
   {
     title: "COPD Management",
@@ -71,6 +90,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "Designed COPD Patient Communication",
     tags: ["Healthcare", "Communication", "UX"],
+    category: "User Research",
   },
   {
     title: "Portfolio Planning for Crane",
@@ -80,6 +100,7 @@ export const projects: Project[] = [
     action: "View Case Study",
     description: "Portfolio Planning Tool for Crane Co.",
     tags: ["Enterprise", "Strategy", "UX"],
+    category: "User Research",
   },
   {
     title: "Guardian",
@@ -89,6 +110,7 @@ export const projects: Project[] = [
     action: "View Project",
     description: "Guardian Personal Safety Device",
     tags: ["Safety", "IoT", "Industrial"],
+    category: "Industrial Design",
   },
   {
     title: "Matrix C",
@@ -98,6 +120,7 @@ export const projects: Project[] = [
     action: "View Gallery",
     description: "Matrix C Industrial Design Gallery",
     tags: ["Industrial", "Gallery"],
+    category: "Industrial Design",
   },
   {
     title: "Fixpert",
@@ -107,6 +130,7 @@ export const projects: Project[] = [
     action: "View Gallery",
     description: "Fixpert DIY Repair Community Platform",
     tags: ["Mobile", "Community", "UX"],
+    category: "Product Design",
   },
   {
     title: "Cycle Bike",
@@ -116,6 +140,7 @@ export const projects: Project[] = [
     action: "View Gallery",
     description: "Sustainable Urban Bike Design",
     tags: ["Industrial", "Transport"],
+    category: "Industrial Design",
   },
   {
     title: "Pure",
@@ -125,6 +150,7 @@ export const projects: Project[] = [
     action: "View Gallery",
     description: "Pure Minimal Product Design",
     tags: ["Industrial", "Minimal"],
+    category: "Industrial Design",
   },
   {
     title: "Sub",
@@ -134,5 +160,6 @@ export const projects: Project[] = [
     action: "View Project",
     description: "Sub Submarine-Inspired Concept Design",
     tags: ["Industrial", "Concept"],
+    category: "Industrial Design",
   },
 ]
