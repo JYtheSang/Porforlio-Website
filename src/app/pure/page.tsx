@@ -57,7 +57,7 @@ export default function Pure() {
             alt="Pure — A Crafted Magnetic Pen"
             width={1600}
             height={900}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             priority
           />
         </div>
