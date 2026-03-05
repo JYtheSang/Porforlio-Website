@@ -64,7 +64,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pinterest Explorer",
-    href: "https://www.jieyangdesign.com/pinterest-explorer-ux-strategy/",
+    href: "/pinterest-explorer",
     image: "/projects/pinterest-explorer.jpg",
     year: "2016",
     action: "Product Design",
