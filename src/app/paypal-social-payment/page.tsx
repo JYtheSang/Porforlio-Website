@@ -93,17 +93,17 @@ function PayPalCover() {
       <div className="w-full h-full flex">
 
         {/* Left: text */}
-        <div className="flex flex-col justify-between p-10 md:p-14" style={{ width: "55%" }}>
-          <p className="text-sm font-semibold tracking-wide">Paypal | Jie Yang</p>
-          <div className="flex flex-col gap-3">
-            <h2 className="text-[32px] font-bold tracking-tight leading-none">
+        <div className="flex flex-col justify-between p-6 sm:p-8 md:p-10 lg:p-14" style={{ width: "55%" }}>
+          <p className="text-xs sm:text-sm font-semibold tracking-wide">Paypal | Jie Yang</p>
+          <div className="flex flex-col gap-2 sm:gap-3">
+            <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-bold tracking-tight leading-none">
               Social Payments
             </h2>
-            <p className="text-base font-normal max-w-md">
+            <p className="text-sm sm:text-base font-normal max-w-md">
               Transforming transactions into social moments
             </p>
           </div>
-          <p className="text-sm font-semibold tracking-wide">2019–2024 | Senior Product Designer</p>
+          <p className="text-xs sm:text-sm font-semibold tracking-wide">2019–2024 | Senior Product Designer</p>
         </div>
 
         {/* Right: scrolling phone screens */}
