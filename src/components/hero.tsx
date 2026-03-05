@@ -6,7 +6,7 @@ const ease = [0.4, 0, 0.2, 1] as const
 
 export function Hero() {
   return (
-    <header className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-12 pb-24 flex flex-col gap-6">
+      <header className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-12 pb-24 flex flex-col gap-8">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-normal text-[#fafafa] max-w-3xl">
         <motion.span
           className="inline w-[500px] leading-[81%]"
@@ -26,29 +26,29 @@ export function Hero() {
         </motion.span>
       </h1>
       <motion.section
-        className="flex flex-col gap-1 text-sm text-[#94a3b8]/90"
+        className="grid grid-cols-3 gap-x-1 text-sm text-[#94a3b8]/90 w-[298px]"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.2, ease }}
       >
-        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
+        <div className="flex w-fit flex-col gap-0.5">
           <span>2024–Present</span>
+          <span>2019–2024</span>
+          <span>2016–2019</span>
+        </div>
+        <div className="flex w-fit flex-col gap-0.5">
           <span>Georgia Tech</span>
+          <span>PayPal</span>
+          <span>SAP Labs</span>
+        </div>
+        <div className="flex w-fit flex-col gap-0.5">
           <span>OMSCS</span>
-        </div>
-        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
-          <span className="w-[84px]">2019–2024</span>
-          <span className="w-[77px]">PayPal</span>
           <span>Senior Product Designer</span>
-        </div>
-        <div className="grid grid-cols-[auto_auto_1fr] gap-x-6 justify-items-start">
-          <span className="w-[84px]">2016–2019</span>
-          <span className="w-[77px]">SAP Labs</span>
-          <span>UX Design Specialist</span>
+          <span className="w-[150px]">UX Design Specialist</span>
         </div>
       </motion.section>
       <motion.div
-        className="mt-2 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.16em] uppercase text-[#a1a1aa]"
+        className="mt-1 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.16em] uppercase text-[#a1a1aa]"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.4, ease }}
