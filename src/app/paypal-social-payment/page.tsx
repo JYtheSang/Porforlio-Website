@@ -190,6 +190,14 @@ export default function PayPalSocialPayment() {
           <div className="max-w-[1250px] mx-auto px-6">
             {section.id === "emojis-themes" ? (
               <AnimatedSectionVideos />
+            ) : section.id === "quick-reply" ? (
+              <AnimatedSectionVideos
+                videos={[
+                  "/projects/paypal/paypal-theme-4.mov",
+                  "/projects/paypal/paypal-theme-5.mov",
+                  "/projects/paypal/paypal-theme-6.mov",
+                ]}
+              />
             ) : (
               <AnimatedSectionImage
                 src={section.image}
