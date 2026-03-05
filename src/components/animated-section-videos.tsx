@@ -8,14 +8,20 @@ const DEFAULT_VIDEOS = [
   "/projects/paypal/paypal-theme-3.mov",
 ]
 
+const DURATION_PER_VIDEO_MS = 3000
+
 interface AnimatedSectionVideosProps {
   videos?: string[]
+  /** When true, plays one video at a time in sequence. When false, all play simultaneously. */
+  sequential?: boolean
 }
 
-export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS }: AnimatedSectionVideosProps) {
+export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS, sequential = false }: AnimatedSectionVideosProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
   const [isVisible, setIsVisible] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
     const element = containerRef.current
@@ -33,7 +39,6 @@ export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS }: AnimatedSecti
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true)
-            videoRefs.current.forEach((v) => { if (v) v.play().catch(() => {}) })
             observer.unobserve(entry.target)
           }
         })
@@ -44,6 +49,42 @@ export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS }: AnimatedSecti
     observer.observe(element)
     return () => { observer.disconnect() }
   }, [])
+
+  useEffect(() => {
+    if (!isVisible || videos.length === 0) return
+
+    if (!sequential) {
+      videoRefs.current.forEach((v) => { if (v) v.play().catch(() => {}) })
+      return
+    }
+
+    const playOne = (index: number) => {
+      videoRefs.current.forEach((v, i) => {
+        if (v) {
+          if (i === index) {
+            v.currentTime = 0
+            v.play().catch(() => {})
+          } else {
+            v.pause()
+          }
+        }
+      })
+    }
+
+    playOne(activeIndex)
+
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % videos.length
+        playOne(next)
+        return next
+      })
+    }, DURATION_PER_VIDEO_MS)
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
+  }, [isVisible, videos.length, sequential])
 
   return (
     <div

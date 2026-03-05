@@ -192,6 +192,7 @@ export default function PayPalSocialPayment() {
               <AnimatedSectionVideos />
             ) : section.id === "quick-reply" ? (
               <AnimatedSectionVideos
+                sequential
                 videos={[
                   "/projects/paypal/paypal-theme-4.mov",
                   "/projects/paypal/paypal-theme-5.mov",
