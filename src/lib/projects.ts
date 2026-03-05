@@ -54,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     title: "SAP Fiori for iOS",
-    href: "https://www.jieyangdesign.com/pinterest-explorer-ux-strategy-2/",
+    href: "/sap-fiori-ios",
     image: "/projects/sap-fiori-ios.png",
     year: "2016-2019",
     action: "Product Design",
