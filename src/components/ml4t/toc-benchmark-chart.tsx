@@ -33,7 +33,7 @@ export function TOCBenchmarkChart() {
       <AnimatedChartWrapper placeholderClassName="h-[260px] md:h-[300px]">
         <div className="w-full h-[260px] md:h-[300px] shrink-0 px-4 pt-4">
           <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }} animationDuration={800}>
+        <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }} >
           <XAxis
             dataKey="date"
             stroke="#7b7f8f"
