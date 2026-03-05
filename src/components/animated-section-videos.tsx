@@ -14,9 +14,15 @@ interface AnimatedSectionVideosProps {
   videos?: string[]
   /** When true, plays one video at a time in sequence. When false, all play simultaneously. */
   sequential?: boolean
+  /** When true, shows the "Playing" indicator under videos. */
+  showPlayingIndicator?: boolean
 }
 
-export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS, sequential = false }: AnimatedSectionVideosProps) {
+export function AnimatedSectionVideos({
+  videos = DEFAULT_VIDEOS,
+  sequential = false,
+  showPlayingIndicator = true,
+}: AnimatedSectionVideosProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
   const [isVisible, setIsVisible] = useState(false)
@@ -94,28 +100,48 @@ export function AnimatedSectionVideos({ videos = DEFAULT_VIDEOS, sequential = fa
       }`}
     >
       <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:gap-[4.5rem] p-6 sm:p-10 md:p-12 lg:p-16">
-        {videos.map((src, i) => (
-          <div
-            key={i}
-            className="relative overflow-hidden flex-1 min-w-0"
-            style={{
-              maxWidth: "min(260px, 24%)",
-              aspectRatio: "816 / 1692",
-              borderRadius: "8%",
-            }}
-          >
-            <video
-              ref={(el) => { videoRefs.current[i] = el }}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
+        {videos.map((src, i) => {
+          const isPlaying = sequential ? i === activeIndex : true
+          return (
+            <div
+              key={i}
+              className="flex flex-col flex-1 min-w-0"
+              style={{
+                maxWidth: "min(260px, 24%)",
+              }}
             >
-              <source src={src} />
-            </video>
-          </div>
-        ))}
+              <div
+                className="relative overflow-hidden"
+                style={{
+                  aspectRatio: "816 / 1692",
+                  borderRadius: "8%",
+                }}
+              >
+                <video
+                  ref={(el) => { videoRefs.current[i] = el }}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                >
+                  <source src={src} />
+                </video>
+              </div>
+              <div className="mt-3 h-5 flex items-center justify-center">
+                {showPlayingIndicator && isPlaying && (
+                  <div className="flex items-center justify-center gap-2 text-[10px] font-medium uppercase tracking-[0.16em] text-[#a1a1aa]">
+                    <span className="relative flex h-2.5 w-2.5 shrink-0 items-center justify-center">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-red-400/70 animate-ping" />
+                      <span className="relative inline-flex h-[9px] w-[9px] rounded-full bg-red-400 shadow-[0_0_0_3px_rgba(248,113,113,0.35)]" />
+                    </span>
+                    <span>Playing</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

@@ -189,7 +189,7 @@ export default function PayPalSocialPayment() {
           {/* Section image */}
           <div className="max-w-[1250px] mx-auto px-6">
             {section.id === "emojis-themes" ? (
-              <AnimatedSectionVideos />
+              <AnimatedSectionVideos showPlayingIndicator={false} />
             ) : section.id === "quick-reply" ? (
               <AnimatedSectionVideos
                 sequential
