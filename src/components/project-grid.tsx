@@ -82,14 +82,27 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
             onMouseLeave={() => setHoveredProject(null)}
           >
             <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={800}
-                height={533}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+              {project.href === "/fixpert" ? (
+                <div className="w-full h-full bg-white flex items-center justify-center">
+                  <Image
+                    src="/projects/fixpert/logo.png"
+                    alt={project.title}
+                    width={280}
+                    height={105}
+                    className="w-auto h-auto max-w-[70%] max-h-[50%] object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={533}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              )}
             </div>
             <div className="flex items-center justify-between px-1 mb-1">
               <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">

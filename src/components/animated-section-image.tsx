@@ -55,7 +55,7 @@ export function AnimatedSectionImage({
     >
       <Image
         {...imageProps}
-        className={`w-full h-auto ${className ?? ""}`}
+        className={`block w-full h-auto ${className ?? ""}`}
       />
     </div>
   )

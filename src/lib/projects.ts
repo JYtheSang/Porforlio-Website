@@ -134,7 +134,7 @@ export const projects: Project[] = [
   },
   {
     title: "Fixpert",
-    href: "https://www.jieyangdesign.com/fixpert/",
+    href: "/fixpert",
     image: "/projects/fixpert.jpg",
     year: "2012",
     action: "Service Design",
