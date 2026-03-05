@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/react"
 import { NavbarClient } from "@/components/navbar-client"
 import "./globals.css"
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className="antialiased">
         <NavbarClient />
         {children}
+        <Analytics />
       </body>
     </html>
   )
