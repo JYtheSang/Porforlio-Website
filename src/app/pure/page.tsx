@@ -130,8 +130,17 @@ export default function Pure() {
             to physical form, testing grip, weight, and cap mechanism.
           </p>
         </SectionText>
-        <div className="mt-10">
-          <SectionImage src="/projects/pure/3d-print.png" alt="3D printing and CNC process" whiteBg />
+        <div className="mt-10 max-w-[800px] mx-auto px-6">
+          <div className="w-full rounded-2xl overflow-hidden bg-white">
+            <Image
+              src="/projects/pure/3d-print.png"
+              alt="3D printing and CNC process"
+              width={1600}
+              height={900}
+              className="block w-full h-auto"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
 
