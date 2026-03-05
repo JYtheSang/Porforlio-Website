@@ -1,6 +1,9 @@
-import Image from "next/image"
 import type { Metadata } from "next"
 import { ArrowLeft } from "lucide-react"
+import { BollingerBandsChart } from "@/components/ml4t/bollinger-bands-chart"
+import { PortfolioPerformanceChart } from "@/components/ml4t/portfolio-performance-chart"
+import { MarketImpactChart } from "@/components/ml4t/market-impact-chart"
+import { TOCBenchmarkChart } from "@/components/ml4t/toc-benchmark-chart"
 
 export const metadata: Metadata = {
   title: "ML-Driven Algorithmic Trading — Jie Yang",
@@ -106,15 +109,9 @@ export default function ML4T() {
                   ))}
                 </div>
                 <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
-                  <Image
-                    src="/projects/ml4t/indicator_evaluation/Bollinger Bands (JPM).png"
-                    alt="Bollinger Bands chart for JPM"
-                    width={1200}
-                    height={600}
-                    className="w-full h-auto block"
-                  />
-                  <p className="text-[12px] text-[#7b7f8f] px-4 py-2.5 border-t border-[#2a2d36] italic">
-                    Bollinger Bands for JPM — price relative to 20-day SMA ± 1.5σ. Buy signals cluster near the lower band during the 2008 drawdown.
+                  <BollingerBandsChart />
+                  <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
+                    Bollinger Bands illustration — price relative to 20-day SMA ± 1.5σ bands. Buy signals typically cluster near the lower band during drawdowns.
                   </p>
                 </div>
               </div>
@@ -206,15 +203,18 @@ export default function ML4T() {
               tests real generalization — both handcrafted and ML strategies defended against the benchmark&apos;s 8.5% loss.
             </p>
             <div className="flex flex-col gap-4">
-              {[
-                { src: "/projects/ml4t/strategy_evaluation/Experiment 1_Manual Strategy vs Strategy Learner vs Benchmark Portfolio (In Sample).png", caption: "In-sample (2008–2009): normalized portfolio values. Red = Manual Strategy, Orange = Strategy Learner, Purple = Benchmark." },
-                { src: "/projects/ml4t/strategy_evaluation/Experiment 1_Manual Strategy vs Strategy Learner vs Benchmark Portfolio (Out of Sample).png", caption: "Out-of-sample (2010–2011): both active strategies outperform the buy-and-hold benchmark." },
-              ].map((fig) => (
-                <div key={fig.src} className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
-                  <Image src={fig.src} alt={fig.caption} width={1200} height={600} className="w-full h-auto block" />
-                  <p className="text-[12px] text-[#7b7f8f] px-4 py-2.5 border-t border-[#2a2d36] italic">{fig.caption}</p>
-                </div>
-              ))}
+              <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
+                <PortfolioPerformanceChart inSample />
+                <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
+                  In-sample (2008–2009): normalized portfolio values. Red = Manual Strategy, Orange = Strategy Learner, Purple = Benchmark.
+                </p>
+              </div>
+              <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
+                <PortfolioPerformanceChart inSample={false} />
+                <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
+                  Out-of-sample (2010–2011): both active strategies outperform the buy-and-hold benchmark.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -227,14 +227,8 @@ export default function ML4T() {
               the learner correctly adapts — trading less frequently and targeting larger moves to remain profitable after friction costs.
             </p>
             <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
-              <Image
-                src="/projects/ml4t/strategy_evaluation/Experiment 2_Combined Impact Analysis (JPM).png"
-                alt="Market impact sensitivity analysis"
-                width={1200}
-                height={600}
-                className="w-full h-auto block"
-              />
-              <p className="text-[12px] text-[#7b7f8f] px-4 py-2.5 border-t border-[#2a2d36] italic">
+              <MarketImpactChart />
+              <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
                 Higher market impact → fewer trades (blue bars) and lower cumulative return (red bars). The learner&apos;s built-in impact awareness drives this adaptive behavior automatically.
               </p>
             </div>
@@ -271,15 +265,9 @@ export default function ML4T() {
               </tbody>
             </table>
             <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
-              <Image
-                src="/projects/ml4t/indicator_evaluation/TOC vs. Benchmark Portfolio(JPM).png"
-                alt="Theoretically Optimal Strategy vs Benchmark"
-                width={1200}
-                height={600}
-                className="w-full h-auto block"
-              />
-              <p className="text-[12px] text-[#7b7f8f] px-4 py-2.5 border-t border-[#2a2d36] italic">
-                ToC vs Benchmark: with perfect foresight, the same capital grows 57× over the same period.
+              <TOCBenchmarkChart />
+              <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
+                ToC vs Benchmark: with perfect foresight, the same capital would grow ~57× over the same period.
               </p>
             </div>
           </div>
