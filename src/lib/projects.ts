@@ -74,7 +74,7 @@ export const projects: Project[] = [
   },
   {
     title: "Ryanair Adventure",
-    href: "https://www.jieyangdesign.com/ryanair-pass/",
+    href: "/ryanair-adventure",
     image: "/projects/ryanair-adventure.png",
     year: "2014-2016",
     action: "View Case Study",
