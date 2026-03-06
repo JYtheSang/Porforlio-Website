@@ -11,10 +11,10 @@ const DEFAULT_OPTIONS: ProjectCategory[] = [
 ]
 
 const LABELS: Record<ProjectCategory, { emoji: string; short: string }> = {
-  "Product Design": { emoji: "🎨", short: "Design" },
+  "Product Design": { emoji: "📟", short: "Design" },
   "Engineering": { emoji: "🛠", short: "Eng" },
   "User Research": { emoji: "🔍", short: "Research" },
-  "Industrial Design": { emoji: "🏭", short: "Industrial" },
+  "Industrial Design": { emoji: "🕹", short: "Industrial" },
 }
 
 export interface ProjectSegmentGroupProps {
