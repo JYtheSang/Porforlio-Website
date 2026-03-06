@@ -24,7 +24,7 @@ const impactData = [
 function TradeLabel({ x, y, width, value }: { x?: number; y?: number; width?: number; value?: number }) {
   if (x == null || y == null || width == null || value == null) return null
   return (
-    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#6c8eff" fontSize={11}>
+    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#a855f7" fontSize={11}>
       {value}
     </text>
   )
@@ -33,7 +33,7 @@ function TradeLabel({ x, y, width, value }: { x?: number; y?: number; width?: nu
 function ReturnLabel({ x, y, width, value }: { x?: number; y?: number; width?: number; value?: number }) {
   if (x == null || y == null || width == null || value == null) return null
   return (
-    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#f87171" fontSize={11}>
+    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#ef4444" fontSize={11}>
       {value.toFixed(2)}
     </text>
   )
@@ -58,26 +58,26 @@ export function MarketImpactChart() {
               <YAxis
                 yAxisId="left"
                 stroke="#7b7f8f"
-                tick={{ fill: "#6c8eff", fontSize: 11 }}
+                tick={{ fill: "#a855f7", fontSize: 11 }}
                 axisLine={{ stroke: "#2a2d36" }}
                 tickLine={false}
                 domain={[0, 70]}
                 ticks={[0, 10, 20, 30, 40, 50, 60, 70]}
               >
-                <Label value="Number of Trades" angle={-90} position="insideLeft" offset={12} fill="#6c8eff" fontSize={12} style={{ textAnchor: "middle" }} />
+                <Label value="Number of Trades" angle={-90} position="insideLeft" offset={12} fill="#a855f7" fontSize={12} style={{ textAnchor: "middle" }} />
               </YAxis>
               <YAxis
                 yAxisId="right"
                 orientation="right"
                 stroke="#7b7f8f"
-                tick={{ fill: "#f87171", fontSize: 11 }}
+                tick={{ fill: "#ef4444", fontSize: 11 }}
                 axisLine={{ stroke: "#2a2d36" }}
                 tickLine={false}
                 domain={[0, 1.6]}
                 ticks={[0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6]}
                 tickFormatter={(v: number) => v.toFixed(1)}
               >
-                <Label value="Cumulative Return" angle={90} position="insideRight" offset={12} fill="#f87171" fontSize={12} style={{ textAnchor: "middle" }} />
+                <Label value="Cumulative Return" angle={90} position="insideRight" offset={12} fill="#ef4444" fontSize={12} style={{ textAnchor: "middle" }} />
               </YAxis>
               <Tooltip
                 contentStyle={{
@@ -98,7 +98,7 @@ export function MarketImpactChart() {
               <Bar
                 yAxisId="left"
                 dataKey="trades"
-                fill="#6c8eff"
+                fill="#a855f7"
                 fillOpacity={0.5}
                 name="Number of Trades"
                 label={<TradeLabel />}
@@ -106,7 +106,7 @@ export function MarketImpactChart() {
               <Bar
                 yAxisId="right"
                 dataKey="return"
-                fill="#f87171"
+                fill="#ef4444"
                 fillOpacity={0.5}
                 name="Cumulative Return"
                 label={<ReturnLabel />}
