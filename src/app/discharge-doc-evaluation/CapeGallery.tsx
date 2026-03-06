@@ -61,7 +61,7 @@ export default function CapeGallery() {
         <button
           onClick={() => setSlideIdx(i => Math.max(0, i - 1))}
           disabled={slideIdx === 0}
-          className="px-4 py-2 text-sm text-[#71717a] hover:text-[#fafafa] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#3f3f46] text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
         >
           ← Prev
         </button>
@@ -69,11 +69,19 @@ export default function CapeGallery() {
           {slideIdx + 1} / {total}
         </span>
         <button
-          onClick={() => setSlideIdx(i => Math.min(total - 1, i + 1))}
-          disabled={slideIdx === total - 1}
-          className="px-4 py-2 text-sm text-[#71717a] hover:text-[#fafafa] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+          onClick={() => {
+            if (slideIdx < total - 1) {
+              setSlideIdx(i => i + 1)
+            } else if (activeSection < sections.length - 1) {
+              goTo(activeSection + 1)
+            }
+          }}
+          disabled={slideIdx === total - 1 && activeSection === sections.length - 1}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#3f3f46] text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
         >
-          Next →
+          {slideIdx === total - 1 && activeSection < sections.length - 1
+            ? `${sections[activeSection + 1].label} →`
+            : "Next →"}
         </button>
       </div>
     </div>

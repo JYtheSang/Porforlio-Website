@@ -20,10 +20,10 @@ export default function DischargeDocEvaluation() {
         </div>
         <p>
           A piloted research study developed at the <strong className="text-[#fafafa] font-semibold">IIT Institute of Design</strong> in collaboration
-          with UIC Hospital & Health Sciences System and U of C Comer Children&apos;s Hospital — evaluating a redesigned
+          with UIC Hospital & Health Sciences System and UIC Comer Children&apos;s Hospital — evaluating a redesigned
           Emergency Department discharge document called the CAPE against existing discharge tools.
         </p>
-        <p className="text-[13px] text-[#71717a]">Team · 6 months · Lead Researcher: Kim Erwin</p>
+        <p className="text-[13px] text-[#71717a]">Team · 6 months</p>
       </div>
 
       <CapeGallery />
