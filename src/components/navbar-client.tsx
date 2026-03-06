@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
+import { TextScramble } from "@/components/ui/text-scramble"
 
 export function NavbarClient() {
   const pathname = usePathname()
@@ -13,8 +14,8 @@ export function NavbarClient() {
       <div className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-9 pb-4 flex items-center justify-between">
 
         {/* Left: name */}
-        <Link href="/" className="text-[17px] font-bold text-[#fafafa] hover:opacity-80 transition-opacity">
-          Jie Yang
+        <Link href="/" className="text-[17px] font-bold text-[#fafafa] transition-opacity">
+          <TextScramble text="Jie Yang" targetText="杨捷" />
         </Link>
 
         {/* Right: nav links */}
