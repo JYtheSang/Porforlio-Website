@@ -4,7 +4,12 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { projects, Project, type ProjectCategory } from "@/lib/projects"
+
+const MotionLink = motion(Link)
+
+let hasLoaded = false
 
 const gridVariants = {
   hidden: { opacity: 0 },
@@ -33,6 +38,7 @@ export interface ProjectGridProps {
 }
 
 export function ProjectGrid({ category = null }: ProjectGridProps) {
+  const skip = hasLoaded
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
   const [mounted, setMounted] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -42,6 +48,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
     : projects
 
   useEffect(() => {
+    hasLoaded = true
     setMounted(true)
     const mql = window.matchMedia("(max-width: 768px)")
     setIsMobile(mql.matches)
@@ -76,14 +83,17 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
         key={category ?? "all"}
         className="grid grid-cols-3 max-[960px]:grid-cols-2 max-[600px]:grid-cols-1 gap-8 max-[960px]:gap-5"
         variants={gridVariants}
-        initial="hidden"
+        initial={skip ? "visible" : "hidden"}
         animate="visible"
       >
-        {filteredProjects.map((project) => (
-          <motion.a
+        {filteredProjects.map((project) => {
+          const isExternal = !project.href.startsWith("/")
+          const Tag = isExternal ? motion.a : MotionLink
+          return (
+          <Tag
             key={project.title}
             href={project.href}
-            {...(!project.href.startsWith("/") && { target: "_blank", rel: "noopener noreferrer" })}
+            {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
             className="block"
             variants={cardVariants}
             {...(!isMobile && {
@@ -125,8 +135,9 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
             <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
               {project.action}
             </p>
-          </motion.a>
-        ))}
+          </Tag>
+          )
+        })}
       </motion.div>
 
       {mounted && !isMobile &&
