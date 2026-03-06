@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { BollingerBandsChart } from "@/components/ml4t/bollinger-bands-chart"
 import { PortfolioPerformanceChart } from "@/components/ml4t/portfolio-performance-chart"
 import { MarketImpactChart } from "@/components/ml4t/market-impact-chart"
 import { TOCBenchmarkChart } from "@/components/ml4t/toc-benchmark-chart"
@@ -96,12 +95,6 @@ export default function ML4T() {
                     </div>
                   ))}
                 </div>
-                <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
-                  <BollingerBandsChart />
-                  <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
-                    Bollinger Bands illustration — price relative to 20-day SMA ± 1.5σ bands. Buy signals typically cluster near the lower band during drawdowns.
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -194,13 +187,13 @@ export default function ML4T() {
               <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
                 <PortfolioPerformanceChart inSample />
                 <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
-                  In-sample (2008–2009): normalized portfolio values. Red = Manual Strategy, Orange = Strategy Learner, Purple = Benchmark.
+                  Manual Strategy vs Strategy Learner vs Benchmark Portfolio (In Sample)
                 </p>
               </div>
               <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
                 <PortfolioPerformanceChart inSample={false} />
                 <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
-                  Out-of-sample (2010–2011): both active strategies outperform the buy-and-hold benchmark.
+                  Manual Strategy vs Strategy Learner vs Benchmark Portfolio (Out of Sample)
                 </p>
               </div>
             </div>
@@ -217,7 +210,7 @@ export default function ML4T() {
             <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
               <MarketImpactChart />
               <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
-                Higher market impact → fewer trades (blue bars) and lower cumulative return (red bars). The learner&apos;s built-in impact awareness drives this adaptive behavior automatically.
+                Impact Analysis on Trading Strategy (JPM)
               </p>
             </div>
           </div>
@@ -255,7 +248,7 @@ export default function ML4T() {
             <div className="bg-[#1e2026] border border-[#2a2d36] rounded-lg overflow-hidden">
               <TOCBenchmarkChart />
               <p className="text-[13px] text-[#7b7f8f] px-4 py-4 leading-relaxed border-t border-[#2a2d36] italic">
-                ToC vs Benchmark: with perfect foresight, the same capital would grow ~57× over the same period.
+                Theoretically Optimal Portfolio vs. Benchmark Portfolio
               </p>
             </div>
           </div>
