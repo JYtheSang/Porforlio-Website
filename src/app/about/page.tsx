@@ -33,10 +33,10 @@ export default function About() {
             Jie Yang is a user-centered designer born in Shanghai and currently based in the San Francisco Bay Area. He began his career in industrial design, where hands-on making and problem-solving shaped his approach to design. With a strong interest in understanding real user needs, he enjoys translating abstract problems into tangible, usable solutions.
           </p>
           <p>
-            Jie earned a Bachelor&apos;s degree from <strong className="text-[#fafafa] font-semibold">Tongji University</strong>, completing his undergraduate studies at the <strong className="text-[#fafafa] font-semibold">Institute of Design (IIT)</strong>. He has worked at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>, contributing to consumer-facing digital products and cross-functional teams.
+            Jie earned a Bachelor&apos;s degree from <strong className="text-[#fafafa] font-semibold">Tongji University</strong>, completing his first Master&apos;s degree at the <strong className="text-[#fafafa] font-semibold">Institute of Design (IIT)</strong>. He has worked at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>, contributing to both business-facing and consumer-facing digital products and cross-functional teams.
           </p>
           <p>
-            As his work evolved, Jie became increasingly interested in how emerging technologies can be applied to improve people&apos;s lives in more meaningful and natural ways. He is currently pursuing a Master&apos;s degree in Computer Science at <strong className="text-[#fafafa] font-semibold">Georgia Tech (OMSCS)</strong> to deepen his technical understanding and strengthen the bridge between design and engineering.
+            As his work evolved, Jie became increasingly interested in how emerging technologies can be applied to improve people&apos;s lives in more meaningful and natural ways. He is currently pursuing a second Master&apos;s degree in Computer Science at <strong className="text-[#fafafa] font-semibold">Georgia Tech (OMSCS)</strong> to deepen his technical understanding and strengthen the bridge between design and engineering.
           </p>
         </div>
 
