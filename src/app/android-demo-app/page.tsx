@@ -58,13 +58,20 @@ export default function AndroidDemoApp() {
           <p className="text-[#7b7f8f] leading-7 mb-6 max-w-[650px]">
             A short video walkthrough of the full user flow — from adding a current job to viewing the comparison table.
           </p>
-          <div className="bg-[#17181c] border-2 border-dashed border-[#2a2d36] rounded-xl aspect-video flex flex-col items-center justify-center gap-4 text-[#7b7f8f] mb-3">
-            <div className="w-14 h-14 rounded-full bg-[#6c8eff1a] border border-[#6c8eff40] flex items-center justify-center text-2xl">▶</div>
-            <p className="text-sm"><strong className="text-[#fafafa]">Video demo coming soon</strong></p>
-            <p className="text-sm">Replace this block with your video or YouTube embed</p>
+          <div className="flex justify-center mb-3">
+            <div className="rounded-2xl overflow-hidden bg-[#17181c] border border-[#2a2d36] w-full max-w-[220px]">
+              <video
+                className="w-full"
+                controls
+                playsInline
+                preload="metadata"
+              >
+                <source src="/projects/android-demo/demo_compressed.webm" type="video/webm" />
+              </video>
+            </div>
           </div>
           <p className="text-sm text-[#7b7f8f] text-center">
-            Full app demo — JobCompare6300 on Android Emulator, Spring 2025
+            Full app demo — engineering-focused project, sorry for the design 😅
           </p>
         </section>
 
