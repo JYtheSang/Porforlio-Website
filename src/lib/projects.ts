@@ -94,7 +94,7 @@ export const projects: Project[] = [
   },
   {
     title: "COPD Management",
-    href: "https://www.jieyangdesign.com/communication-design/",
+    href: "/copd-management",
     image: "/projects/copd-management.jpg",
     year: "2014-2016",
     action: "User Research",
