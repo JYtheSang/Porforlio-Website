@@ -154,12 +154,12 @@ export default function PayPalSocialPayment() {
     <main className="pb-24">
 
       {/* Cover */}
-      <div className="max-w-[1250px] mx-auto px-6">
+      <div className="max-w-[1250px] mx-auto px-6 pt-4">
         <PayPalCover />
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-10 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
         <div className="mb-2">
           <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">PayPal · 2019–2024</p>
           <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
