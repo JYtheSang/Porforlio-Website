@@ -23,7 +23,7 @@ export function ProjectSection() {
         value={category}
         onValueChange={({ value }) => setCategory(value as ProjectCategory)}
         defaultValue="Product Design"
-        className="max-w-[598px] mb-8"
+        className="max-w-max mb-8"
       />
       <ProjectGrid category={category} />
     </motion.section>
