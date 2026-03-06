@@ -44,7 +44,7 @@ export default function AndroidDemoApp() {
                 <span className="text-sm font-semibold text-[#fafafa]">Snigdha Majeti</span>
                 <span className="text-sm font-semibold text-[#fafafa]">Srikanta Patra</span>
               </div>
-              <div className="text-[11px] text-[#7b7f8f]">
+              <div className="text-[14px] text-[#7b7f8f]">
                 <span className="text-[#6c8eff] font-medium">My contribution:</span> UI design, front-end development, and backend support
               </div>
             </div>
@@ -54,10 +54,7 @@ export default function AndroidDemoApp() {
         {/* ── Demo ── */}
         <section id="demo" className="py-16 border-b border-[#2a2d36]">
           <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">01 — Demo</div>
-          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">App Walkthrough</h2>
-          <p className="text-[#7b7f8f] leading-7 mb-6 max-w-[650px]">
-            A short video walkthrough of the full user flow — from adding a current job to viewing the comparison table.
-          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">App Demo</h2>
           <div className="flex justify-center mb-3">
             <div className="rounded-2xl overflow-hidden bg-[#17181c] border border-[#2a2d36] w-full max-w-[220px]">
               <video
@@ -71,7 +68,7 @@ export default function AndroidDemoApp() {
             </div>
           </div>
           <p className="text-sm text-[#7b7f8f] text-center">
-            Full app demo — engineering-focused project, sorry for the design 😅
+            Full app demo<br />Engineering-focused project, sorry for the design 😅
           </p>
         </section>
 
