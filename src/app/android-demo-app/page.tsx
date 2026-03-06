@@ -282,7 +282,7 @@ export default function AndroidDemoApp() {
         </section>
 
         {/* ── Implementation Notes ── */}
-        <section id="constraints" className="py-16 border-b border-[#2a2d36]">
+        <section id="constraints" className="py-16">
           <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">06 — Implementation Notes</div>
           <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">Validation & Edge Cases</h2>
           <p className="text-[#7b7f8f] leading-7 mb-6 max-w-[650px]">

@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: "Android Demo App",
     href: "/android-demo-app",
-    image: "/projects/ML4T.png",
+    image: "/projects/Android-demo-thumbnail-edited.png",
     year: "2025",
     action: "View Case Study",
     description: "Job comparison Android app with SQLite, layered architecture, and weighted scoring engine",
