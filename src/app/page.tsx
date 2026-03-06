@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero"
 import { ProjectSection } from "@/components/project-section"
-import { Linkedin, Instagram, Mail } from "lucide-react"
+import { BuiltWith } from "@/components/built-with"
+import { Linkedin, Instagram, Mail, FileText } from "lucide-react"
 
 export default function Home() {
   return (
@@ -41,8 +42,18 @@ export default function Home() {
             <Mail className="w-4 h-4" />
             Email
           </a>
+          <a
+            href="/Resume_JieY.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#fafafa] hover:opacity-60 transition-opacity"
+          >
+            <FileText className="w-4 h-4" />
+            Resume
+          </a>
         </div>
       </footer>
+      <BuiltWith />
     </main>
   )
 }
