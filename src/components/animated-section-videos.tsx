@@ -114,7 +114,6 @@ export function AnimatedSectionVideos({
                 className="relative overflow-hidden"
                 style={{
                   aspectRatio: "816 / 1692",
-                  borderRadius: "8%",
                 }}
               >
                 <video

@@ -125,7 +125,7 @@ function PayPalCover() {
                 style={{ animation: "scroll-up 90s linear infinite" }}
               >
                 {col1Screens.map((src, i) => (
-                  <img key={i} src={src} alt="" className="w-full rounded-2xl" />
+                  <img key={i} src={src} alt="" className="w-full" />
                 ))}
               </div>
             </div>
@@ -137,7 +137,7 @@ function PayPalCover() {
                 style={{ marginTop: "20%", animation: "scroll-up 70s linear infinite", animationDelay: "-12s" }}
               >
                 {col2Screens.map((src, i) => (
-                  <img key={i} src={src} alt="" className="w-full rounded-2xl" />
+                  <img key={i} src={src} alt="" className="w-full" />
                 ))}
               </div>
             </div>
