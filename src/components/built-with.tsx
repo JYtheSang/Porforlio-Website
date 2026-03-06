@@ -1,9 +1,9 @@
 export function BuiltWith() {
   return (
     <div className="w-full border-t border-white/10 py-4">
-      <div className="flex items-center justify-center gap-1.5 text-[11px] text-white/40">
+      <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-2 text-[11px] text-white/40 px-4">
         <span>Designed and developed with</span>
-        <div className="flex items-center gap-3 ml-1">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://www.figma.com"
             target="_blank"

@@ -14,7 +14,7 @@ export default function Home() {
       >
         <div
           id="socialLinks"
-          className="flex items-center justify-center gap-[36px]"
+          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
         >
           <a
             href="https://www.linkedin.com/in/jieyangdesign/"
