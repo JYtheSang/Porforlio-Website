@@ -35,12 +35,20 @@ export interface ProjectGridProps {
 export function ProjectGrid({ category = null }: ProjectGridProps) {
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
   const [mounted, setMounted] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   const filteredProjects = category
     ? projects.filter((p) => p.category === category)
     : projects
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    setMounted(true)
+    const mql = window.matchMedia("(max-width: 768px)")
+    setIsMobile(mql.matches)
+    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    mql.addEventListener("change", onChange)
+    return () => mql.removeEventListener("change", onChange)
+  }, [])
 
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
@@ -78,8 +86,10 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
             {...(!project.href.startsWith("/") && { target: "_blank", rel: "noopener noreferrer" })}
             className="block"
             variants={cardVariants}
-            onMouseEnter={() => setHoveredProject(project)}
-            onMouseLeave={() => setHoveredProject(null)}
+            {...(!isMobile && {
+              onMouseEnter: () => setHoveredProject(project),
+              onMouseLeave: () => setHoveredProject(null),
+            })}
           >
             <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
               {project.href === "/fixpert" ? (
@@ -119,7 +129,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
         ))}
       </motion.div>
 
-      {mounted &&
+      {mounted && !isMobile &&
         createPortal(
           <AnimatePresence>
             {hoveredProject && (
