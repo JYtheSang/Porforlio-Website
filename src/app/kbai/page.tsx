@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Solving ARC-AGI — Jie Yang",
@@ -201,21 +200,10 @@ export default function KBAI() {
   return (
     <main className="pb-24">
 
-      {/* Back nav */}
-      <div className="max-w-[900px] mx-auto px-6 pt-10 pb-6">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 text-[13px] font-bold tracking-[1px] uppercase text-[#a1a1aa] hover:text-[#fafafa] transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          Back
-        </a>
-      </div>
-
       <div className="max-w-[900px] mx-auto px-6">
 
         {/* ── Hero ── */}
-        <div className="pb-16 border-b border-[#2a2d36]">
+        <div className="pt-16 pb-16 border-b border-[#2a2d36]">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-[#fafafa] mb-5">
             Solving ARC-AGI<br />
             <span className="text-[#6c8eff]">Without Neural Networks</span>
