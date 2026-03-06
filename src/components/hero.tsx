@@ -35,7 +35,7 @@ export function Hero() {
         </motion.span>
       </h1>
       <motion.section
-        className="grid grid-cols-3 gap-x-1 text-sm text-[#94a3b8]/90 w-[298px]"
+        className="grid grid-cols-[auto_auto_auto] gap-x-4 text-sm text-[#94a3b8]/90 w-fit"
         initial={{ opacity: skip ? 1 : 0, y: skip ? 0 : 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={skip ? { duration: 0 } : { duration: 1, delay: 1.2, ease }}
@@ -53,7 +53,7 @@ export function Hero() {
         <div className="flex w-fit flex-col gap-0.5">
           <span>OMSCS</span>
           <span>Senior Product Designer</span>
-          <span className="w-[150px]">UX Design Specialist</span>
+          <span>UX Design Specialist</span>
         </div>
       </motion.section>
       <motion.div
