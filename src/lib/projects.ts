@@ -145,7 +145,7 @@ export const projects: Project[] = [
   {
     title: "Cycle Bike",
     href: "/tongjibike",
-    image: "/projects/cycle-bike.jpg",
+    image: "/projects/tongjibike/exhibition.jpg",
     year: "2012",
     action: "Service Design",
     description: "Sustainable Bike Loaning & Recycling System",

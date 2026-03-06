@@ -152,19 +152,6 @@ export default function TongjiCycle() {
         </div>
       </div>
 
-      {/* Values */}
-      <div className="mt-20">
-        <SectionText title="The Value">
-          <p>
-            Through Cycle, Tongji students learn by doing — understanding how bikes work and how to care for them.
-            Graduates leave campus with real mechanical literacy, and the campus becomes more colorful and alive.
-          </p>
-        </SectionText>
-        <div className="mt-10">
-          <SectionImage src="/projects/tongjibike/values.png" alt="Project values" whiteBg />
-        </div>
-      </div>
-
       {/* Exhibition */}
       <div className="mt-20">
         <SectionText title="Nordic Design & Innovation Week at Bridge 8, Shanghai">

@@ -131,13 +131,13 @@ export default function Pure() {
           </p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
-          <div className="w-full rounded-2xl overflow-hidden bg-white">
+          <div className="w-full rounded-2xl overflow-hidden bg-white" style={{ aspectRatio: "16/9" }}>
             <Image
               src="/projects/pure/3d-print.png"
               alt="3D printing and CNC process"
               width={1600}
               height={900}
-              className="block w-full h-auto"
+              className="w-full h-full object-cover scale-105"
               loading="lazy"
             />
           </div>
