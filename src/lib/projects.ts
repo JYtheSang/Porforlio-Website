@@ -33,6 +33,16 @@ export const projects: Project[] = [
     category: "Engineering",
   },
   {
+    title: "Android Demo App",
+    href: "/android-demo-app",
+    image: "/projects/Android-demo-thumbnail-edited.png",
+    year: "2025",
+    action: "View Case Study",
+    description: "Job comparison Android app with SQLite, layered architecture, and weighted scoring engine",
+    tags: ["Georgia Tech", "Java", "Android"],
+    category: "Engineering",
+  },
+  {
     title: "PayPal Social Payment",
     href: "/paypal-social-payment",
     image: "/projects/paypal-social-payment_L.png",
