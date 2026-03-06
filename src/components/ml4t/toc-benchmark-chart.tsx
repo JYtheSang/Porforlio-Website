@@ -50,7 +50,7 @@ export function TOCBenchmarkChart() {
     <div className="w-full flex flex-col">
       <AnimatedChartWrapper placeholderClassName="h-[260px] md:h-[300px]">
         <div className="w-full h-[260px] md:h-[300px] shrink-0 px-4 pt-4 relative">
-          <div className="absolute top-6 left-[100px] z-10 flex flex-col gap-1.5 text-[11px]">
+          <div className="absolute top-6 left-25 z-10 flex flex-col gap-1.5 text-[11px] bg-[#1e2026]/90 border border-[#2a2d36] rounded-lg px-3 py-2">
             <span className="flex items-center gap-2"><span className="w-5 h-0.5 shrink-0 bg-[#ef4444] rounded-full" /><span className="text-[#ef4444] font-medium">Theoretically Optimal Portfolio</span></span>
             <span className="flex items-center gap-2"><span className="w-5 h-0.5 shrink-0 bg-[#a855f7] rounded-full" /><span className="text-[#a855f7] font-medium">Benchmark Portfolio</span></span>
           </div>
