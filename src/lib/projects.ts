@@ -84,7 +84,7 @@ export const projects: Project[] = [
   },
   {
     title: "Discharge Doc Evaluation",
-    href: "https://www.jieyangdesign.com/discharge-document-evaluation/",
+    href: "/discharge-doc-evaluation",
     image: "/projects/discharge-doc-eval.jpg",
     year: "2014-2016",
     action: "User Research",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
   },
   {
     title: "Portfolio Planning for Crane",
-    href: "https://www.jieyangdesign.com/new-page-1/",
+    href: "/crane",
     image: "/projects/portfolio-planning-crane.jpg",
     year: "2014-2016",
     action: "View Case Study",
