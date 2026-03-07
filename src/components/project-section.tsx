@@ -29,7 +29,6 @@ export function ProjectSection() {
       <ProjectSegmentGroup
         value={category}
         onValueChange={({ value }) => setCategory(value as ProjectCategory)}
-        defaultValue="Product Design"
         className="w-full mb-8"
       />
       <ProjectGrid category={category} />
