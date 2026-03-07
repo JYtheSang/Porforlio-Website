@@ -1,6 +1,7 @@
 "use client"
 
-import { SegmentGroup } from "@ark-ui/react/segment-group"
+import { useState } from "react"
+import { motion, LayoutGroup } from "framer-motion"
 import type { ProjectCategory } from "@/lib/projects"
 
 const DEFAULT_OPTIONS: ProjectCategory[] = [
@@ -29,37 +30,64 @@ export function ProjectSegmentGroup({
   options = DEFAULT_OPTIONS,
   value,
   onValueChange,
-  defaultValue = "Product Design",
   className,
 }: ProjectSegmentGroupProps) {
+  const [hovered, setHovered] = useState<ProjectCategory | null>(null)
+
   return (
     <div className={className}>
-      <SegmentGroup.Root
-        orientation="horizontal"
-        value={value}
-        onValueChange={(details) => {
-          if (details.value != null) onValueChange?.({ value: details.value as ProjectCategory })
-        }}
-        defaultValue={defaultValue}
-        className="flex w-full gap-0.5 bg-[#17181c] border border-[#2a2d36] relative p-1 rounded-lg overflow-hidden"
-      >
-        <SegmentGroup.Indicator className="bg-[#27272a] z-10 rounded-md shadow-sm h-(--height) w-(--width) transition-all duration-200 border border-[#2a2d36]" />
-        {options.map((option) => (
-          <SegmentGroup.Item
-            key={option}
-            value={option}
-            className="flex flex-auto min-w-0 items-center justify-center select-none cursor-pointer text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 z-20 text-[#94a3b8] hover:text-[#fafafa] data-[state=checked]:text-[#fafafa] data-disabled:cursor-not-allowed data-disabled:opacity-40 transition-colors duration-200"
-          >
-            <SegmentGroup.ItemText className="inline-flex items-center gap-1.5 min-w-0">
-              <span className="shrink-0">{LABELS[option].emoji}</span>
-              <span className="truncate sm:hidden">{LABELS[option].short}</span>
-              <span className="truncate hidden sm:inline">{option}</span>
-            </SegmentGroup.ItemText>
-            <SegmentGroup.ItemControl />
-            <SegmentGroup.ItemHiddenInput />
-          </SegmentGroup.Item>
-        ))}
-      </SegmentGroup.Root>
+      <LayoutGroup>
+        <div
+          role="radiogroup"
+          aria-orientation="horizontal"
+          className="flex w-full gap-0.5 bg-[#17181c] border border-[#2a2d36] p-1 rounded-lg"
+          onMouseLeave={() => setHovered(null)}
+        >
+          {options.map((option) => {
+            const isSelected = option === value
+            const isHovered = option === hovered
+            const textColor = isSelected ? "#fafafa" : isHovered ? "#d4d4d8" : "#94a3b8"
+            return (
+              <motion.button
+                key={option}
+                role="radio"
+                aria-checked={isSelected}
+                onClick={() => onValueChange?.({ value: option })}
+                onMouseEnter={() => setHovered(option)}
+                whileTap={{ scale: 0.96 }}
+                className="flex flex-auto min-w-0 items-center justify-center relative select-none cursor-pointer text-xs sm:text-sm font-medium px-2 sm:px-4 py-2 rounded-md focus-visible:outline-none"
+                animate={{ color: textColor }}
+                transition={{ duration: 0.15 }}
+              >
+                {/* Selected indicator — full weight, always visible */}
+                {isSelected && (
+                  <motion.span
+                    layoutId="tab-selected"
+                    className="absolute inset-0 bg-[#27272a] rounded-md border border-[#2a2d36] shadow-sm"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                  />
+                )}
+                {/* Hover indicator — lighter ghost, only on unselected tabs */}
+                {isHovered && !isSelected && (
+                  <motion.span
+                    layoutId="tab-hover"
+                    className="absolute inset-0 bg-white/[0.04] rounded-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                  />
+                )}
+                <span className="inline-flex items-center gap-1.5 min-w-0 relative z-10 pointer-events-none">
+                  <span className="shrink-0">{LABELS[option].emoji}</span>
+                  <span className="truncate sm:hidden">{LABELS[option].short}</span>
+                  <span className="truncate hidden sm:inline">{option}</span>
+                </span>
+              </motion.button>
+            )
+          })}
+        </div>
+      </LayoutGroup>
     </div>
   )
 }

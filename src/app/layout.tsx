@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="antialiased">
         <NavbarClient />
         {children}
-        <Analytics />
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )
