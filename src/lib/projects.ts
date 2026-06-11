@@ -33,6 +33,16 @@ export const projects: Project[] = [
     category: "Engineering",
   },
   {
+    title: "PhaseBreach",
+    href: "/unity-demo-game",
+    image: "/projects/phasebreach-thumbnail.png",
+    year: "2026",
+    action: "Unity",
+    description: "A Unity WebGL game playable directly in the browser",
+    tags: ["Unity", "C#", "WebGL"],
+    category: "Engineering",
+  },
+  {
     title: "Android Demo App",
     href: "/android-demo-app",
     image: "/projects/Android-demo-thumbnail-edited.png",
