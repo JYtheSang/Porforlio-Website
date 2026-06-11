@@ -52,7 +52,7 @@ export default function UnityDemoGame() {
           </p>
           <div className="rounded-2xl overflow-hidden bg-[#17181c] border border-[#2a2d36] w-full aspect-[8/5]">
             <iframe
-              src="https://play.unity.com/en/games/2774205f-c72e-4cf0-b888-78c1271fe44c/phasebreach"
+              src="/projects/phasebreach/index.html"
               className="w-full h-full"
               allowFullScreen
               allow="autoplay; fullscreen"
