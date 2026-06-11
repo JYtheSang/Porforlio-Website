@@ -37,7 +37,7 @@ export const projects: Project[] = [
     href: "/unity-demo-game",
     image: "/projects/phasebreach-thumbnail.png",
     year: "2026",
-    action: "Unity",
+    action: "Unity Game Development",
     description: "A Unity WebGL game playable directly in the browser",
     tags: ["Unity", "C#", "WebGL"],
     category: "Engineering",

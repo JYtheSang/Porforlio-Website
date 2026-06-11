@@ -113,6 +113,17 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
                     loading="lazy"
                   />
                 </div>
+              ) : project.href === "/unity-demo-game" ? (
+                <div className="w-full h-full bg-[#151417] flex items-center justify-center">
+                  <Image
+                    src="/projects/unity-logo-dark.png"
+                    alt={project.title}
+                    width={160}
+                    height={160}
+                    className="w-[93px] h-[90px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
               ) : (
                 <Image
                   src={project.image}
