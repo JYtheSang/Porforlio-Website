@@ -16,13 +16,13 @@ export default function SAPFioriIOS() {
   return (
     <main className="pb-24">
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-10 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-10 flex flex-col gap-5 text-base leading-7 text-[#94a3b8] border-b border-[#2a2d36] pb-10">
         <div className="mb-2">
           <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">
             SAP · 2016–2019
           </p>
           <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
-            SAP Fiori for iOS
+            SAP Fiori for iOS Design System
           </h1>
         </div>
         <p>
@@ -53,8 +53,13 @@ export default function SAPFioriIOS() {
         </a>
       </div>
 
-      {/* Case study images */}
-      <div className="mt-20">
+      <div className="mt-10">
+        <div className="max-w-[800px] mx-auto px-6 mb-6">
+          <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa]">
+            More about the project
+          </h2>
+        </div>
+
         <div className="max-w-[1250px] mx-auto px-6">
           <div className="w-full overflow-hidden rounded-2xl">
             {images.map((n) => (
