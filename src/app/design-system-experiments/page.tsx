@@ -49,35 +49,30 @@ export default function DesignSystemExperiments() {
           </h1>
         </div>
         <p>
-          Handoff from Figma often stops at static frames. Layout, color, and type are there — but
-          the delivery is still a picture, not a product.{" "}
+          Design handoff often ends before the experience becomes real. This project closes that gap
+          by{" "}
           <strong className="text-[#fafafa] font-semibold">
-            Interaction details are missing or implied
+            building components in a live environment
           </strong>
-          : expand and collapse behavior, hover and focus states, loading and empty states, and how
-          components respond when data changes in real time.
+          —not static screenshots—so design intent can be reviewed, tested, and refined in a live
+          environment.
         </p>
         <p>
-          That gap makes it hard for designers and engineers to align on what the experience should
-          actually feel like. Static specs do not carry the rhythm of a real app — the timing of an
-          animation, the density of a dashboard, or the way a card reads when eight of them share a
-          screen. This project started from that problem:{" "}
-          <strong className="text-[#fafafa] font-semibold">
-            build components that behave like software, not screenshots
-          </strong>
-          , so design intent can be reviewed, tested, and iterated in a live environment.
+          It also explores how AI-assisted coding tools can create tangible value beyond generating
+          screen concepts, enabling a more effective bridge between design and engineering through
+          executable, production-minded components.
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href={FIGMA_URL}
+            href={STORYBOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#60a5fa] hover:opacity-80 transition-opacity"
           >
-            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-              <path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4m0-24C5.8 0 4 1.8 4 4s1.8 4 4 4h4V4c0-2.2-1.8-4-4-4m0 8C5.8 8 4 9.8 4 12s1.8 4 4 4h4V8zm8-8h-4v8h4c2.2 0 4-1.8 4-4s-1.8-4-4-4m0 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
+            <svg className="w-3.5 h-3.5" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+              <path d="M21.786 0l-.007 6.457L16 3.277 4.926 9.671v12.658L16 28.723l11.074-6.394V11.33L16 17.724l-1.926-1.112v8.015l-5.86-3.38V13.41L16 10.066l11.074 6.394V.006L21.786 0z" />
             </svg>
-            Figma
+            Live demo
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a
@@ -93,15 +88,15 @@ export default function DesignSystemExperiments() {
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a
-            href={STORYBOOK_URL}
+            href={FIGMA_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#60a5fa] hover:opacity-80 transition-opacity"
           >
-            <svg className="w-3.5 h-3.5" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
-              <path d="M21.786 0l-.007 6.457L16 3.277 4.926 9.671v12.658L16 28.723l11.074-6.394V11.33L16 17.724l-1.926-1.112v8.015l-5.86-3.38V13.41L16 10.066l11.074 6.394V.006L21.786 0z" />
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+              <path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4m0-24C5.8 0 4 1.8 4 4s1.8 4 4 4h4V4c0-2.2-1.8-4-4-4m0 8C5.8 8 4 9.8 4 12s1.8 4 4 4h4V8zm8-8h-4v8h4c2.2 0 4-1.8 4-4s-1.8-4-4-4m0 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
             </svg>
-            Live demo
+            Figma
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
@@ -109,7 +104,18 @@ export default function DesignSystemExperiments() {
 
       {/* Figma source */}
       <div className="mt-20">
-        <div className="max-w-[1250px] mx-auto px-6 flex justify-center">
+        <SectionText title="Static Figma spec">
+          <p>
+            Figma handoff often stops at static frames — layout, color, and type are set, but{" "}
+            <strong className="text-[#fafafa] font-semibold">
+              interaction is missing or implied
+            </strong>
+            : states, motion, and how components respond to live data. The embed below is that
+            starting point: a visual spec, not yet a product surface.
+          </p>
+        </SectionText>
+
+        <div className="max-w-[1250px] mx-auto px-6 mt-10 flex justify-center">
           <div className="w-full max-w-[1024px] overflow-hidden rounded-2xl border border-[#2a2d36] bg-[#17181c]">
             <div className="flex items-center justify-between gap-4 px-4 py-3 border-b border-[#2a2d36] bg-[#1f2128]">
               <p className="text-sm font-medium tracking-[-0.15px] text-[#fafafa]">
@@ -201,12 +207,10 @@ export default function DesignSystemExperiments() {
       <div className="mt-20">
         <SectionText title="Reviewing in Storybook">
           <p>
-            Storybook is where the component becomes a product surface — not a single screen in a
-            larger app, but a self-contained artifact you can inspect, test, and share. Open a story
-            to see a variant in isolation, use the{" "}
-            <strong className="text-[#fafafa] font-semibold">Controls</strong> panel to swap props at
-            runtime, and switch to the{" "}
-            <strong className="text-[#fafafa] font-semibold">Docs</strong> tab for usage notes and API
+            Storybook is where the component becomes a self-contained product surface you can{" "}
+            <strong className="text-[#fafafa] font-semibold">inspect, test, and share</strong> — not a
+            single screen buried in a larger app. Open a story to see a variant in isolation, use the
+            Controls panel to swap props at runtime, and switch to the Docs tab for usage notes and API
             reference. The Design addon embeds the original Figma frame side by side, so you can compare
             implementation against the source without leaving the browser.
           </p>
