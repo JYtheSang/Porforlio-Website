@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: "Product Design",
   },
   {
-    title: "SAP Copilot",
+    title: "SAP Digital Assistant",
     href: "/sap-copilot",
     image: "/projects/sap-copilot.png",
     year: "2016-2019",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     category: "Product Design",
   },
   {
-    title: "SAP Fiori for iOS",
+    title: "SAP Design System for iOS",
     href: "/sap-fiori-ios",
     image: "/projects/sap-fiori-ios.png",
     year: "2016-2019",
