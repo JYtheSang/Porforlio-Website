@@ -65,11 +65,11 @@ export const projects: Project[] = [
   {
     title: "Delivering Design System in Code",
     href: "/design-system-experiments",
-    image: "/projects/design-system-experiments/thumbnail.png",
+    image: "/projects/design-system-experiments/figma-storybook-thumbnail.png",
     year: "2026",
-    action: "Design System",
+    action: "Design System · Coding",
     description: "Delivering a design system in code with full interaction, states, and motion",
-    tags: ["React", "Storybook", "Design System", "Figma"],
+    tags: ["React", "Storybook", "Design System", "Figma", "Coding"],
     category: "Product Design",
   },
   {

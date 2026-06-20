@@ -12,15 +12,12 @@ export const metadata: Metadata = {
 const FIGMA_EMBED_SRC =
   "https://embed.figma.com/design/S9ay6OOmlWx0ajUFmNqSSZ/Untitled?node-id=2-643&embed-host=share"
 
-const STORYBOOK_IFRAME_SRC =
-  "https://f092ee8bc35977171efb7a82124a5d89.share.chromatic.com/iframe.html?id=components-sensorstatuscard--docs&viewMode=docs"
-
 const GITHUB_URL = "https://github.com/JYtheSang/design-system-experiments"
 
 const FIGMA_URL =
   "https://www.figma.com/design/S9ay6OOmlWx0ajUFmNqSSZ/Untitled?node-id=2-643"
 
-const LIVE_DEMO_URL =
+const STORYBOOK_URL =
   "https://f092ee8bc35977171efb7a82124a5d89.share.chromatic.com/?path=/docs/components-sensorstatuscard--docs"
 
 function SectionText({
@@ -96,7 +93,7 @@ export default function DesignSystemExperiments() {
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
           <a
-            href={LIVE_DEMO_URL}
+            href={STORYBOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#60a5fa] hover:opacity-80 transition-opacity"
@@ -112,12 +109,26 @@ export default function DesignSystemExperiments() {
 
       {/* Figma source */}
       <div className="mt-20">
-        <div className="max-w-[1250px] mx-auto px-6">
-          <div className="overflow-hidden rounded-2xl border border-[#2a2d36] bg-[#17181c]">
+        <div className="max-w-[1250px] mx-auto px-6 flex justify-center">
+          <div className="w-full max-w-[1024px] overflow-hidden rounded-2xl border border-[#2a2d36] bg-[#17181c]">
+            <div className="flex items-center justify-between gap-4 px-4 py-3 border-b border-[#2a2d36] bg-[#1f2128]">
+              <p className="text-sm font-medium tracking-[-0.15px] text-[#fafafa]">
+                RobotCard — Figma design
+              </p>
+              <a
+                href={FIGMA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#60a5fa] hover:opacity-80 transition-opacity shrink-0"
+              >
+                Open in Figma
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
             <iframe
               src={FIGMA_EMBED_SRC}
               title="RobotCard Figma design"
-              className="w-full h-[800px] border-0 bg-white"
+              className="w-full h-[560px] border-0 bg-white"
               loading="lazy"
               allowFullScreen
             />
@@ -171,14 +182,18 @@ export default function DesignSystemExperiments() {
           </p>
         </SectionText>
 
-        <div className="max-w-[1250px] mx-auto px-6 mt-10">
-          <AnimatedSectionImage
-            src="/projects/design-system-experiments/cursor-workflow.png"
-            alt="Cursor editor with Figma MCP, agent chat, and the portfolio case study in the browser preview"
-            width={1024}
-            height={551}
-            loading="lazy"
-          />
+        <div className="max-w-[1250px] mx-auto px-6 mt-10 flex justify-center">
+          <div className="w-full max-w-[1024px]">
+            <AnimatedSectionImage
+              src="/projects/design-system-experiments/cursor-demo-full.png"
+              alt="Cursor demo — Figma MCP, agent chat, and SensorStatusCard variants in the browser preview"
+              width={3840}
+              height={2160}
+              unoptimized
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
 
@@ -196,10 +211,6 @@ export default function DesignSystemExperiments() {
             implementation against the source without leaving the browser.
           </p>
           <p>
-            The benefit is alignment at every layer: designers review real interaction, engineers get
-            a stable contract for each variant, and the team shares one link instead of a PDF and a
-            separate prototype. Add-ons for accessibility and visual regression (Chromatic) catch drift
-            early — before a component ships inside a full dashboard.{" "}
             <strong className="text-[#fafafa] font-semibold">
               Try the component in the embed below — expand a card, switch variants, and notice the
               live interaction that a static Figma frame cannot show.
@@ -207,12 +218,12 @@ export default function DesignSystemExperiments() {
           </p>
         </SectionText>
 
-        <div className="max-w-[1250px] mx-auto px-6 mt-10">
-          <div className="overflow-hidden rounded-2xl border border-[#2a2d36] bg-[#17181c]">
+        <div className="max-w-[1250px] mx-auto px-6 mt-10 flex justify-center">
+          <div className="w-full max-w-[1024px] overflow-hidden rounded-2xl border border-[#2a2d36] bg-[#17181c]">
             <iframe
-              src={STORYBOOK_IFRAME_SRC}
-              title="SensorStatusCard Storybook demo"
-              className="w-full h-[960px] border-0 bg-white"
+              src={STORYBOOK_URL}
+              title="Design system Storybook"
+              className="w-full h-[1000px] border-0 bg-white"
               loading="lazy"
             />
           </div>

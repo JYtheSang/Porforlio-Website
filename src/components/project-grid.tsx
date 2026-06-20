@@ -124,6 +124,18 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
                     loading="lazy"
                   />
                 </div>
+              ) : project.href === "/design-system-experiments" ? (
+                <div className="w-full h-full bg-white flex items-center justify-center">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={663}
+                    height={406}
+                    unoptimized
+                    className="w-auto h-auto max-w-[72%] max-h-[72%] object-contain"
+                    loading="lazy"
+                  />
+                </div>
               ) : (
                 <Image
                   src={project.image}
