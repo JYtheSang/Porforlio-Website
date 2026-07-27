@@ -18,7 +18,7 @@ const FIGMA_URL =
   "https://www.figma.com/design/S9ay6OOmlWx0ajUFmNqSSZ/Untitled?node-id=2-643"
 
 const STORYBOOK_URL =
-  "https://f092ee8bc35977171efb7a82124a5d89.share.chromatic.com/?path=/docs/components-sensorstatuscard--docs"
+  "https://jythesang.github.io/design-system-experiments/?path=/docs/components-fleetgrid--docs"
 
 function SectionText({
   title,
