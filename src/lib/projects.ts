@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     title: "Solving ARC-AGI",
     href: "/kbai",
-    image: "/projects/KBAI-thumbnail.png",
+    image: "/projects/KBAI-thumbnail-light.png",
     year: "2025",
     action: "Artificial Intelligence",
     description: "Built a Knowledge-Based Agent that Solves Visual Reasoning Puzzles",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
   {
     title: "ML-Driven Algorithmic Trading",
     href: "/ml4t",
-    image: "/projects/ML4T.png",
+    image: "/projects/ML4T-light.png",
     year: "2024",
     action: "Machine Learning",
     description: "Built an ML Trading Pipeline from Scratch",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     title: "Android Demo App",
     href: "/android-demo-app",
-    image: "/projects/Android-demo-thumbnail-edited.png",
+    image: "/projects/Android-demo-thumbnail-light.png",
     year: "2025",
     action: "View Case Study",
     description: "Job comparison Android app with SQLite, layered architecture, and weighted scoring engine",

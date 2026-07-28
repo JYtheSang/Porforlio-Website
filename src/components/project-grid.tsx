@@ -103,7 +103,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
           >
             <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#e4e4e7] mb-3">
               {project.href === "/fixpert" ? (
-                <div className="w-full h-full bg-white flex items-center justify-center">
+                <div className="w-full h-full bg-[#f4f4f5] flex items-center justify-center">
                   <Image
                     src="/projects/fixpert/logo.png"
                     alt={project.title}
@@ -116,7 +116,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
               ) : project.href === "/unity-demo-game" ? (
                 <div className="w-full h-full bg-[#f4f4f5] flex items-center justify-center">
                   <Image
-                    src="/projects/unity-logo-dark.png"
+                    src="/projects/unity-logo-light.png"
                     alt={project.title}
                     width={160}
                     height={160}
@@ -125,7 +125,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
                   />
                 </div>
               ) : project.href === "/design-system-experiments" ? (
-                <div className="w-full h-full bg-white flex items-center justify-center">
+                <div className="w-full h-full bg-[#f4f4f5] flex items-center justify-center">
                   <Image
                     src={project.image}
                     alt={project.title}
