@@ -159,16 +159,16 @@ export default function PayPalSocialPayment() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-10 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-10 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">PayPal · 2019–2024</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">PayPal · 2019–2024</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Social Payments
           </h1>
         </div>
         <p>
           During my time at PayPal, I worked on a range of products exploring the{" "}
-          <strong className="text-[#fafafa] font-semibold">social dimensions of payments</strong>. We observed
+          <strong className="text-[#0a0a0a] font-semibold">social dimensions of payments</strong>. We observed
           that traditional payment flows treated transactions as isolated actions, often stripping away the
           social context that gives them meaning. We believed that payments should not exist as standalone
           steps, but be deeply integrated into the social spaces where conversation, intent, and shared
@@ -177,7 +177,7 @@ export default function PayPalSocialPayment() {
         </p>
         <p>
           The work shown here represents{" "}
-          <strong className="text-[#fafafa] font-semibold">shipped outcomes of a much broader exploration</strong>{" "}
+          <strong className="text-[#0a0a0a] font-semibold">shipped outcomes of a much broader exploration</strong>{" "}
           effort across social, messaging, and payment surfaces, all of which are accessible within the PayPal
           app or website, while much of the broader exploration remains internal due to confidentiality.
         </p>
@@ -212,20 +212,20 @@ export default function PayPalSocialPayment() {
 
           {/* Section text */}
           <div className="max-w-[800px] mx-auto px-6 mt-10">
-            <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">
+            <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">
               {section.title}
             </h2>
-            <p className="text-sm text-[#a1a1aa] mb-5">
-              <span className="font-semibold text-[#fafafa]">Role: </span>
+            <p className="text-sm text-[#71717a] mb-5">
+              <span className="font-semibold text-[#0a0a0a]">Role: </span>
               {section.role}
             </p>
-            <p className="text-base leading-7 text-[#94a3b8]">{section.description}</p>
+            <p className="text-base leading-7 text-[#64748b]">{section.description}</p>
             {section.link && (
               <a
                 href={section.link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-[#60a5fa] hover:opacity-80 transition-opacity"
+                className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-[#3b82f6] hover:opacity-80 transition-opacity"
               >
                 {section.link.label}
                 <ArrowUpRight className="w-3.5 h-3.5" />

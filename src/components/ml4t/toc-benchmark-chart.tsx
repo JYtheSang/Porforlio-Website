@@ -50,37 +50,37 @@ export function TOCBenchmarkChart() {
     <div className="w-full flex flex-col">
       <AnimatedChartWrapper placeholderClassName="h-[260px] md:h-[300px]">
         <div className="w-full h-[260px] md:h-[300px] shrink-0 px-4 pt-4 relative">
-          <div className="absolute top-6 left-25 z-10 flex flex-col gap-1.5 text-[11px] bg-[#1e2026]/90 border border-[#2a2d36] rounded-lg px-3 py-2">
+          <div className="absolute top-6 left-25 z-10 flex flex-col gap-1.5 text-[11px] bg-[#f4f4f5]/90 border border-[#e4e4e7] rounded-lg px-3 py-2">
             <span className="flex items-center gap-2"><span className="w-5 h-0.5 shrink-0 bg-[#ef4444] rounded-full" /><span className="text-[#ef4444] font-medium">Theoretically Optimal Portfolio</span></span>
-            <span className="flex items-center gap-2"><span className="w-5 h-0.5 shrink-0 bg-[#a855f7] rounded-full" /><span className="text-[#a855f7] font-medium">Benchmark Portfolio</span></span>
+            <span className="flex items-center gap-2"><span className="w-5 h-0.5 shrink-0 bg-[#9333ea] rounded-full" /><span className="text-[#9333ea] font-medium">Benchmark Portfolio</span></span>
           </div>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data} margin={{ top: 8, right: 8, left: 4, bottom: 20 }}>
               <XAxis
                 dataKey="date"
-                stroke="#7b7f8f"
-                tick={{ fill: "#7b7f8f", fontSize: 11 }}
-                axisLine={{ stroke: "#2a2d36" }}
+                stroke="#52525b"
+                tick={{ fill: "#52525b", fontSize: 11 }}
+                axisLine={{ stroke: "#e4e4e7" }}
                 tickLine={false}
                 ticks={QUARTERLY_TICKS}
               >
-                <Label value="Date" position="insideBottom" offset={-12} fill="#7b7f8f" fontSize={12} />
+                <Label value="Date" position="insideBottom" offset={-12} fill="#52525b" fontSize={12} />
               </XAxis>
               <YAxis
-                stroke="#7b7f8f"
-                tick={{ fill: "#7b7f8f", fontSize: 11 }}
-                axisLine={{ stroke: "#2a2d36" }}
+                stroke="#52525b"
+                tick={{ fill: "#52525b", fontSize: 11 }}
+                axisLine={{ stroke: "#e4e4e7" }}
                 tickLine={false}
                 domain={[0, 60]}
                 ticks={[0, 10, 20, 30, 40, 50, 60]}
                 tickFormatter={(v: number) => String(v)}
               >
-                <Label value="Normalized Value" angle={-90} position="insideLeft" offset={8} fill="#7b7f8f" fontSize={12} style={{ textAnchor: "middle" }} />
+                <Label value="Normalized Value" angle={-90} position="insideLeft" offset={8} fill="#52525b" fontSize={12} style={{ textAnchor: "middle" }} />
               </YAxis>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "#1e2026",
-                  border: "1px solid #2a2d36",
+                  backgroundColor: "#f4f4f5",
+                  border: "1px solid #e4e4e7",
                   borderRadius: "8px",
                   fontSize: 12,
                 }}
@@ -90,7 +90,7 @@ export function TOCBenchmarkChart() {
               <Line
                 type="monotone"
                 dataKey="benchmark"
-                stroke="#a855f7"
+                stroke="#9333ea"
                 strokeWidth={2}
                 dot={false}
                 name="Benchmark"

@@ -12,11 +12,11 @@ export default function UnityDemoGame() {
       <div className="max-w-[900px] mx-auto px-6">
 
         {/* ── Hero ── */}
-        <div className="pt-16 pb-16 border-b border-[#2a2d36]">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-[#fafafa] mb-5">
-            Phase<span className="text-[#6c8eff]">Breach</span>
+        <div className="pt-16 pb-16 border-b border-[#e4e4e7]">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-[#0a0a0a] mb-5">
+            Phase<span className="text-[#4a6cf7]">Breach</span>
           </h1>
-          <p className="text-lg text-[#7b7f8f] max-w-[600px] mb-10">
+          <p className="text-lg text-[#52525b] max-w-[600px] mb-10">
             A Unity WebGL game playable directly in the browser. Built with C# and deployed via WebGL.
           </p>
           <div className="flex flex-wrap gap-6">
@@ -27,17 +27,17 @@ export default function UnityDemoGame() {
               { label: "Year", value: "2026" },
             ].map((m) => (
               <div key={m.label} className="flex flex-col gap-0.5">
-                <span className="text-[11px] uppercase tracking-widest text-[#7b7f8f]">{m.label}</span>
-                <span className="text-sm font-semibold text-[#fafafa]">{m.value}</span>
+                <span className="text-[11px] uppercase tracking-widest text-[#52525b]">{m.label}</span>
+                <span className="text-sm font-semibold text-[#0a0a0a]">{m.value}</span>
               </div>
             ))}
           </div>
           <div className="mt-10">
-            <span className="text-[11px] uppercase tracking-widest text-[#7b7f8f]">Team</span>
+            <span className="text-[11px] uppercase tracking-widest text-[#52525b]">Team</span>
             <div className="mt-1 space-y-1">
-              <p className="text-sm font-semibold text-[#fafafa]">Team Project</p>
-              <div className="text-[14px] text-[#7b7f8f]">
-                <span className="text-[#6c8eff] font-medium">My contribution:</span> game scene and character control
+              <p className="text-sm font-semibold text-[#0a0a0a]">Team Project</p>
+              <div className="text-[14px] text-[#52525b]">
+                <span className="text-[#4a6cf7] font-medium">My contribution:</span> game scene and character control
               </div>
             </div>
           </div>
@@ -45,12 +45,12 @@ export default function UnityDemoGame() {
 
         {/* ── Game Embed ── */}
         <section id="game" className="py-16">
-          <div className="text-[11px] font-mono text-[#6c8eff] uppercase tracking-[0.12em] mb-3.5">01 — Play</div>
-          <h2 className="text-3xl font-bold tracking-tight text-[#fafafa] mb-5">Play in Browser</h2>
-          <p className="text-[#7b7f8f] leading-7 mb-8">
+          <div className="text-[11px] font-mono text-[#4a6cf7] uppercase tracking-[0.12em] mb-3.5">01 — Play</div>
+          <h2 className="text-3xl font-bold tracking-tight text-[#0a0a0a] mb-5">Play in Browser</h2>
+          <p className="text-[#52525b] leading-7 mb-8">
             Use WASD to control direction, left click to shoot, right click to rotate camera, space bar to skip forward.
           </p>
-          <div className="rounded-2xl overflow-hidden bg-[#17181c] border border-[#2a2d36] w-full aspect-[8/5]">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] border border-[#e4e4e7] w-full aspect-[8/5]">
             <iframe
               src="/projects/phasebreach/index.html"
               className="w-full h-full"

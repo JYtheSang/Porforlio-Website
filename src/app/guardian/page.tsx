@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -64,16 +64,16 @@ export default function Guardian() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Industrial Design · 2013</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Industrial Design · 2013</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Guardian — Making Surgical Waiting Easier
           </h1>
         </div>
         <p>
           Anxiety, tension, exhaustion — family members experience double pressure mentally and physically during
-          surgical waiting. <strong className="text-[#fafafa] font-semibold">Guardian</strong> offers necessary resources
+          surgical waiting. <strong className="text-[#0a0a0a] font-semibold">Guardian</strong> offers necessary resources
           of information, energy, and comfort within limited space and investment. This small package is designed to
           become a bridge between doctors and families — to alleviate negative emotions and establish a more harmonious
           patient-physician relationship.
@@ -85,7 +85,7 @@ export default function Guardian() {
       <div className="mt-20">
         <SectionText title="China's Medical Battleground">
           <p className="mb-4">
-            <strong className="text-[#fafafa] font-semibold">Chinese doctors are becoming targets of patients' anger.</strong>
+            <strong className="text-[#0a0a0a] font-semibold">Chinese doctors are becoming targets of patients' anger.</strong>
           </p>
           <p>
             China's hospitals are a battleground — not just for illness but also for tensions between physicians and patients.
@@ -96,7 +96,7 @@ export default function Guardian() {
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
           <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src="/projects/guardian/stats.jpg"
                 alt="Protest scene"
@@ -106,14 +106,14 @@ export default function Guardian() {
                 loading="lazy"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden bg-[#18181b] flex flex-col items-center justify-center p-8 gap-6">
+            <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] flex flex-col items-center justify-center p-8 gap-6">
               <div className="text-center">
-                <p className="text-5xl font-bold text-[#fafafa] tracking-tight">27.3</p>
-                <p className="text-sm text-[#94a3b8] mt-1">attacks per hospital / year</p>
+                <p className="text-5xl font-bold text-[#0a0a0a] tracking-tight">27.3</p>
+                <p className="text-sm text-[#64748b] mt-1">attacks per hospital / year</p>
               </div>
               <div className="text-center">
-                <p className="text-5xl font-bold text-[#fafafa] tracking-tight">12.5%</p>
-                <p className="text-sm text-[#94a3b8] mt-1">of hospitals over 100 attacks / year</p>
+                <p className="text-5xl font-bold text-[#0a0a0a] tracking-tight">12.5%</p>
+                <p className="text-sm text-[#64748b] mt-1">of hospitals over 100 attacks / year</p>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Guardian() {
           </p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-2 gap-4">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
             <Image
               src="/projects/guardian/hospital.jpg"
               alt="Hospital hallway"
@@ -143,7 +143,7 @@ export default function Guardian() {
               loading="lazy"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
             <Image
               src="/projects/guardian/waiting-room.jpg"
               alt="Waiting room"
@@ -174,19 +174,19 @@ export default function Guardian() {
       <div className="mt-20">
         <div className="max-w-[800px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-4">Mentally</h2>
-            <ul className="space-y-4 text-[#94a3b8] text-base leading-7">
-              <li><strong className="text-[#fafafa] font-semibold">Unoccupied time feels longer</strong> — Occasional distraction stops clock-watching, making time move forward.</li>
-              <li><strong className="text-[#fafafa] font-semibold">Anxiety amplifies wait</strong> — Running through worst-case scenarios makes family members more distressed.</li>
-              <li><strong className="text-[#fafafa] font-semibold">Uncertain waits feel longer</strong> — Clear time estimates dramatically improve the quality of waiting.</li>
-              <li><strong className="text-[#fafafa] font-semibold">Solo waits feel longer</strong> — Company and support are essential, even for those who feel self-sufficient.</li>
+            <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-4">Mentally</h2>
+            <ul className="space-y-4 text-[#64748b] text-base leading-7">
+              <li><strong className="text-[#0a0a0a] font-semibold">Unoccupied time feels longer</strong> — Occasional distraction stops clock-watching, making time move forward.</li>
+              <li><strong className="text-[#0a0a0a] font-semibold">Anxiety amplifies wait</strong> — Running through worst-case scenarios makes family members more distressed.</li>
+              <li><strong className="text-[#0a0a0a] font-semibold">Uncertain waits feel longer</strong> — Clear time estimates dramatically improve the quality of waiting.</li>
+              <li><strong className="text-[#0a0a0a] font-semibold">Solo waits feel longer</strong> — Company and support are essential, even for those who feel self-sufficient.</li>
             </ul>
           </div>
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-4">Physically</h2>
-            <ul className="space-y-4 text-[#94a3b8] text-base leading-7">
-              <li><strong className="text-[#fafafa] font-semibold">Limited facilities</strong> — No dedicated rest areas add physical discomfort and compound emotional distress.</li>
-              <li><strong className="text-[#fafafa] font-semibold">Lack of supplies</strong> — Families refuse to leave the area for hours, but hospitals provide nothing to sustain them.</li>
+            <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-4">Physically</h2>
+            <ul className="space-y-4 text-[#64748b] text-base leading-7">
+              <li><strong className="text-[#0a0a0a] font-semibold">Limited facilities</strong> — No dedicated rest areas add physical discomfort and compound emotional distress.</li>
+              <li><strong className="text-[#0a0a0a] font-semibold">Lack of supplies</strong> — Families refuse to leave the area for hours, but hospitals provide nothing to sustain them.</li>
             </ul>
           </div>
         </div>
@@ -194,8 +194,8 @@ export default function Guardian() {
 
       {/* HMW */}
       <div className="mt-20 max-w-[800px] mx-auto px-6">
-        <div className="border border-[#3f3f46] rounded-2xl p-10 text-center">
-          <p className="text-xl font-semibold text-[#fafafa] leading-snug tracking-tight">
+        <div className="border border-[#d4d4d8] rounded-2xl p-10 text-center">
+          <p className="text-xl font-semibold text-[#0a0a0a] leading-snug tracking-tight">
             How might we make surgical waiting less stressful — both physically and mentally?
           </p>
         </div>
@@ -219,10 +219,10 @@ export default function Guardian() {
             { num: "3", title: "Snacks", desc: "Gum, chocolate, tea, and nuts — nutrients that reduce mental stress, saving a trip to the overpriced café." },
             { num: "4", title: "Water", desc: "Stay hydrated, stay healthy." },
           ].map((item) => (
-            <div key={item.num} className="bg-[#18181b] rounded-2xl p-5">
-              <p className="text-3xl font-bold text-[#fafafa] mb-1">{item.num}</p>
-              <p className="text-base font-semibold text-[#fafafa] mb-2">{item.title}</p>
-              <p className="text-sm leading-6 text-[#94a3b8]">{item.desc}</p>
+            <div key={item.num} className="bg-[#f4f4f5] rounded-2xl p-5">
+              <p className="text-3xl font-bold text-[#0a0a0a] mb-1">{item.num}</p>
+              <p className="text-base font-semibold text-[#0a0a0a] mb-2">{item.title}</p>
+              <p className="text-sm leading-6 text-[#64748b]">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -234,7 +234,7 @@ export default function Guardian() {
           <p>The final Guardian kit, photographed in context.</p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b] mb-4">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] mb-4">
             <Image
               src="/projects/guardian/product-1.jpg"
               alt="Guardian product"
@@ -246,7 +246,7 @@ export default function Guardian() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {["product-2", "product-3", "product-4", "product-5"].map((img) => (
-              <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+              <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
                 <Image
                   src={`/projects/guardian/${img}.jpg`}
                   alt={`Guardian ${img}`}

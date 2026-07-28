@@ -10,8 +10,8 @@ html {
 }
 
 body {
-  background: #0a0a0a;
-  color: #fafafa;
+  background: #ffffff;
+  color: #0a0a0a;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }

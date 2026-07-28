@@ -101,7 +101,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
               onMouseLeave: () => setHoveredProject(null),
             })}
           >
-            <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
+            <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#e4e4e7] mb-3">
               {project.href === "/fixpert" ? (
                 <div className="w-full h-full bg-white flex items-center justify-center">
                   <Image
@@ -114,7 +114,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
                   />
                 </div>
               ) : project.href === "/unity-demo-game" ? (
-                <div className="w-full h-full bg-[#151417] flex items-center justify-center">
+                <div className="w-full h-full bg-[#f4f4f5] flex items-center justify-center">
                   <Image
                     src="/projects/unity-logo-dark.png"
                     alt={project.title}
@@ -148,14 +148,14 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
               )}
             </div>
             <div className="flex items-center justify-between px-1 mb-1">
-              <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
+              <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#0a0a0a] truncate">
                 {project.title}
               </span>
-              <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
+              <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#71717a] whitespace-nowrap ml-2">
                 {project.year}
               </span>
             </div>
-            <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
+            <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#64748b] px-1">
               {project.action}
             </p>
           </Tag>

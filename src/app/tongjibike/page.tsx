@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -64,15 +64,15 @@ export default function TongjiCycle() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Service Design · 2012</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Service Design · 2012</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Cycle — A Bike Loaning and Recycling System
           </h1>
         </div>
         <p>
-          <strong className="text-[#fafafa] font-semibold">Cycle</strong> introduces a holistic sustainable transportation
+          <strong className="text-[#0a0a0a] font-semibold">Cycle</strong> introduces a holistic sustainable transportation
           system for Tongji University. Students get a uniquely designed bike they can personalize with colors and
           materials — creating ownership, community, and pride. When students graduate, they return the bike for the
           next generation.
@@ -92,7 +92,7 @@ export default function TongjiCycle() {
           </p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b] mb-4">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] mb-4">
             <Image
               src="/projects/tongjibike/campus-1.jpg"
               alt="Bikes on campus"
@@ -108,9 +108,9 @@ export default function TongjiCycle() {
               { title: "Broken Bikes", desc: "Bikes are not maintained. When damaged, students show no interest in repairs — even for minor issues." },
               { title: "No Ownership", desc: "Most bikes look identical, making them hard to locate when workers move them. Bikes are just tools, not connected to personal identity." },
             ].map((item) => (
-              <div key={item.title} className="bg-[#18181b] rounded-2xl p-5">
-                <p className="text-base font-semibold text-[#fafafa] mb-2">{item.title}</p>
-                <p className="text-sm leading-6 text-[#94a3b8]">{item.desc}</p>
+              <div key={item.title} className="bg-[#f4f4f5] rounded-2xl p-5">
+                <p className="text-base font-semibold text-[#0a0a0a] mb-2">{item.title}</p>
+                <p className="text-sm leading-6 text-[#64748b]">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -119,10 +119,10 @@ export default function TongjiCycle() {
 
       {/* Introducing Cycle */}
       <div className="mt-20 max-w-[800px] mx-auto px-6">
-        <div className="border border-[#3f3f46] rounded-2xl p-10 text-center">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Introducing</p>
-          <p className="text-4xl font-bold text-[#fafafa] tracking-tight mb-3">CYCLE</p>
-          <p className="text-base text-[#94a3b8]">A sustainable bike loaning and recycling system</p>
+        <div className="border border-[#d4d4d8] rounded-2xl p-10 text-center">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Introducing</p>
+          <p className="text-4xl font-bold text-[#0a0a0a] tracking-tight mb-3">CYCLE</p>
+          <p className="text-base text-[#64748b]">A sustainable bike loaning and recycling system</p>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ export default function TongjiCycle() {
           </p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b] mb-4">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] mb-4">
             <Image
               src="/projects/tongjibike/exhibition.jpg"
               alt="Exhibition overview"
@@ -173,7 +173,7 @@ export default function TongjiCycle() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {["exhibition-1", "exhibition-2", "exhibition-3", "exhibition-4"].map((img) => (
-              <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+              <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
                 <Image
                   src={`/projects/tongjibike/${img}.jpg`}
                   alt={`Exhibition ${img}`}
@@ -195,7 +195,7 @@ export default function TongjiCycle() {
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-3 gap-4">
           {["process-1", "process-2", "process-3"].map((img) => (
-            <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src={`/projects/tongjibike/${img}.jpg`}
                 alt={`Process ${img}`}

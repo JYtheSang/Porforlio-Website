@@ -1,14 +1,14 @@
 export function BuiltWith() {
   return (
-    <div className="w-full border-t border-white/10 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-2 text-[11px] text-white/40 px-4">
+    <div className="w-full border-t border-black/10 py-4">
+      <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-2 text-[11px] text-black/40 px-4">
         <span>Designed and developed with</span>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://www.figma.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white/70 transition-colors"
+            className="flex items-center gap-1 hover:text-black/70 transition-colors"
             aria-label="Figma"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
@@ -20,7 +20,7 @@ export function BuiltWith() {
             href="https://claude.ai"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white/70 transition-colors"
+            className="flex items-center gap-1 hover:text-black/70 transition-colors"
             aria-label="Claude"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
@@ -32,7 +32,7 @@ export function BuiltWith() {
             href="https://cursor.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white/70 transition-colors"
+            className="flex items-center gap-1 hover:text-black/70 transition-colors"
             aria-label="Cursor"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
@@ -44,7 +44,7 @@ export function BuiltWith() {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white/70 transition-colors"
+            className="flex items-center gap-1 hover:text-black/70 transition-colors"
             aria-label="GitHub"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
@@ -56,7 +56,7 @@ export function BuiltWith() {
             href="https://vercel.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white/70 transition-colors"
+            className="flex items-center gap-1 hover:text-black/70 transition-colors"
             aria-label="Vercel"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">

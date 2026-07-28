@@ -26,18 +26,18 @@ export default function CapeGallery() {
   return (
     <div className="mt-12 max-w-[800px] mx-auto px-6">
       {/* Tab bar */}
-      <div className="flex gap-1 border-b border-[#27272a] mb-6">
+      <div className="flex gap-1 border-b border-[#e4e4e7] mb-6">
         {sections.map((s, i) => (
           <button
             key={s.label}
             onClick={() => goTo(i)}
             className={`px-4 py-2.5 text-sm font-medium tracking-wide transition-colors relative ${
-              activeSection === i ? "text-[#fafafa]" : "text-[#71717a] hover:text-[#a1a1aa]"
+              activeSection === i ? "text-[#0a0a0a]" : "text-[#71717a] hover:text-[#71717a]"
             }`}
           >
             {s.label}
             {activeSection === i && (
-              <span className="absolute bottom-0 left-0 right-0 h-px bg-[#fafafa]" />
+              <span className="absolute bottom-0 left-0 right-0 h-px bg-[#0a0a0a]" />
             )}
           </button>
         ))}
@@ -61,11 +61,11 @@ export default function CapeGallery() {
         <button
           onClick={() => setSlideIdx(i => Math.max(0, i - 1))}
           disabled={slideIdx === 0}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#3f3f46] text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d4d4d8] text-sm font-medium text-[#71717a] hover:text-[#0a0a0a] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
         >
           ← Prev
         </button>
-        <span className="text-xs text-[#52525b] tabular-nums">
+        <span className="text-xs text-[#a1a1aa] tabular-nums">
           {slideIdx + 1} / {total}
         </span>
         <button
@@ -77,7 +77,7 @@ export default function CapeGallery() {
             }
           }}
           disabled={slideIdx === total - 1 && activeSection === sections.length - 1}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#3f3f46] text-sm font-medium text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+          className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d4d4d8] text-sm font-medium text-[#71717a] hover:text-[#0a0a0a] hover:border-[#71717a] disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
         >
           {slideIdx === total - 1 && activeSection < sections.length - 1
             ? `${sections[activeSection + 1].label} →`

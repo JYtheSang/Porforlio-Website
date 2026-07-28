@@ -40,13 +40,13 @@ export function ProjectSegmentGroup({
         <div
           role="radiogroup"
           aria-orientation="horizontal"
-          className="flex w-full gap-0.5 bg-[#17181c] border border-[#2a2d36] p-1 rounded-lg"
+          className="flex w-full gap-0.5 bg-[#f4f4f5] border border-[#e4e4e7] p-1 rounded-lg"
           onMouseLeave={() => setHovered(null)}
         >
           {options.map((option) => {
             const isSelected = option === value
             const isHovered = option === hovered
-            const textColor = isSelected ? "#fafafa" : isHovered ? "#d4d4d8" : "#94a3b8"
+            const textColor = isSelected ? "#0a0a0a" : isHovered ? "#52525b" : "#64748b"
             return (
               <motion.button
                 key={option}
@@ -63,7 +63,7 @@ export function ProjectSegmentGroup({
                 {isSelected && (
                   <motion.span
                     layoutId="tab-selected"
-                    className="absolute inset-0 bg-[#27272a] rounded-md border border-[#2a2d36] shadow-sm"
+                    className="absolute inset-0 bg-white rounded-md border border-[#e4e4e7] shadow-sm"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
                   />
                 )}
@@ -71,7 +71,7 @@ export function ProjectSegmentGroup({
                 {isHovered && !isSelected && (
                   <motion.span
                     layoutId="tab-hover"
-                    className="absolute inset-0 bg-white/[0.04] rounded-md"
+                    className="absolute inset-0 bg-black/[0.04] rounded-md"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

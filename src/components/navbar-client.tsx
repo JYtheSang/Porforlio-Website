@@ -10,11 +10,11 @@ export function NavbarClient() {
   const isAbout = pathname === "/about"
 
   return (
-    <nav className="w-full bg-[#0a0a0a]">
+    <nav className="w-full bg-[#ffffff]">
       <div className="max-w-[1250px] w-full mx-auto px-6 md:px-24 pt-9 pb-4 flex items-center justify-between">
 
         {/* Left: name */}
-        <Link href="/" className="text-[17px] font-bold text-[#fafafa] transition-opacity">
+        <Link href="/" className="text-[17px] font-bold text-[#0a0a0a] transition-opacity">
           <TextScramble text="Jie Yang" targetText="杨捷" />
         </Link>
 
@@ -23,7 +23,7 @@ export function NavbarClient() {
           <Link
             href="/"
             className={`text-[13px] font-bold tracking-[0px] ${
-              isHome ? "text-[#60a5fa] hover:opacity-80" : "text-[#fafafa] hover:opacity-60"
+              isHome ? "text-[#3b82f6] hover:opacity-80" : "text-[#0a0a0a] hover:opacity-60"
             } transition-opacity`}
           >
             Work
@@ -31,7 +31,7 @@ export function NavbarClient() {
           <Link
             href="/about"
             className={`text-[13px] font-bold tracking-normal ${
-              isAbout ? "text-[#60a5fa] hover:opacity-80" : "text-[#fafafa] hover:opacity-60"
+              isAbout ? "text-[#3b82f6] hover:opacity-80" : "text-[#0a0a0a] hover:opacity-60"
             } transition-opacity`}
           >
             About Me

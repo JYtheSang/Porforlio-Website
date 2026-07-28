@@ -49,7 +49,7 @@ export function AnimatedSectionImage({
   return (
     <div
       ref={ref}
-      className={`w-full rounded-2xl overflow-hidden bg-[#18181b] transform transition-all duration-2000 ease-out ${
+      className={`w-full rounded-2xl overflow-hidden bg-[#f4f4f5] transform transition-all duration-2000 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${containerClassName ?? ""}`}
     >

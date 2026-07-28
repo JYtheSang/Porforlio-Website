@@ -24,7 +24,7 @@ const impactData = [
 function TradeLabel({ x, y, width, value }: { x?: number; y?: number; width?: number; value?: number }) {
   if (x == null || y == null || width == null || value == null) return null
   return (
-    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#a855f7" fontSize={11}>
+    <text x={x + width / 2} y={y - 5} textAnchor="middle" fill="#9333ea" fontSize={11}>
       {value}
     </text>
   )
@@ -48,30 +48,30 @@ export function MarketImpactChart() {
             <ComposedChart data={impactData} margin={{ top: 24, right: 32, left: 4, bottom: 20 }}>
               <XAxis
                 dataKey="impact"
-                stroke="#7b7f8f"
-                tick={{ fill: "#7b7f8f", fontSize: 11 }}
-                axisLine={{ stroke: "#2a2d36" }}
+                stroke="#52525b"
+                tick={{ fill: "#52525b", fontSize: 11 }}
+                axisLine={{ stroke: "#e4e4e7" }}
                 tickLine={false}
               >
-                <Label value="Impact Value" position="insideBottom" offset={-12} fill="#7b7f8f" fontSize={12} />
+                <Label value="Impact Value" position="insideBottom" offset={-12} fill="#52525b" fontSize={12} />
               </XAxis>
               <YAxis
                 yAxisId="left"
-                stroke="#7b7f8f"
-                tick={{ fill: "#a855f7", fontSize: 11 }}
-                axisLine={{ stroke: "#2a2d36" }}
+                stroke="#52525b"
+                tick={{ fill: "#9333ea", fontSize: 11 }}
+                axisLine={{ stroke: "#e4e4e7" }}
                 tickLine={false}
                 domain={[0, 70]}
                 ticks={[0, 10, 20, 30, 40, 50, 60, 70]}
               >
-                <Label value="Number of Trades" angle={-90} position="insideLeft" offset={12} fill="#a855f7" fontSize={12} style={{ textAnchor: "middle" }} />
+                <Label value="Number of Trades" angle={-90} position="insideLeft" offset={12} fill="#9333ea" fontSize={12} style={{ textAnchor: "middle" }} />
               </YAxis>
               <YAxis
                 yAxisId="right"
                 orientation="right"
-                stroke="#7b7f8f"
+                stroke="#52525b"
                 tick={{ fill: "#ef4444", fontSize: 11 }}
-                axisLine={{ stroke: "#2a2d36" }}
+                axisLine={{ stroke: "#e4e4e7" }}
                 tickLine={false}
                 domain={[0, 1.6]}
                 ticks={[0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6]}
@@ -81,8 +81,8 @@ export function MarketImpactChart() {
               </YAxis>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "#1e2026",
-                  border: "1px solid #2a2d36",
+                  backgroundColor: "#f4f4f5",
+                  border: "1px solid #e4e4e7",
                   borderRadius: "8px",
                   fontSize: 12,
                 }}
@@ -98,7 +98,7 @@ export function MarketImpactChart() {
               <Bar
                 yAxisId="left"
                 dataKey="trades"
-                fill="#a855f7"
+                fill="#9333ea"
                 fillOpacity={0.5}
                 name="Number of Trades"
                 label={<TradeLabel />}

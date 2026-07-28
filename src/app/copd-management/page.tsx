@@ -15,8 +15,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -26,15 +26,15 @@ export default function CopdManagement() {
     <main className="pb-24">
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">User Research · 2014–2016</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">User Research · 2014–2016</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Patient Education for the Real World of COPD
           </h1>
         </div>
         <p>
-          <strong className="text-[#fafafa] font-semibold">Breathe</strong> is a Techstars-funded startup that designs
+          <strong className="text-[#0a0a0a] font-semibold">Breathe</strong> is a Techstars-funded startup that designs
           apps for patients with chronic lung conditions — including asthma, COPD, and cystic fibrosis. These diseases,
           when poorly managed, consume billions of healthcare dollars.
         </p>
@@ -48,8 +48,8 @@ export default function CopdManagement() {
 
       {/* Design Challenge */}
       <div className="mt-20 max-w-[800px] mx-auto px-6">
-        <div className="border border-[#3f3f46] rounded-2xl p-10 text-center">
-          <p className="text-xl font-semibold text-[#fafafa] leading-snug tracking-tight">
+        <div className="border border-[#d4d4d8] rounded-2xl p-10 text-center">
+          <p className="text-xl font-semibold text-[#0a0a0a] leading-snug tracking-tight">
             What are the factors and forces at work in the home care context for COPD patients that Breathe could design for?
           </p>
         </div>
@@ -86,9 +86,9 @@ export default function CopdManagement() {
         <SectionText title="Communication Design Outcome">
           <p className="mb-4">
             The final deliverable is a layered infographic that maps the emotional and behavioral landscape across
-            three key stakeholders — <strong className="text-[#fafafa] font-semibold">patients</strong>,{" "}
-            <strong className="text-[#fafafa] font-semibold">caregivers</strong>, and{" "}
-            <strong className="text-[#fafafa] font-semibold">family</strong> — showing how COPD reverberates through
+            three key stakeholders — <strong className="text-[#0a0a0a] font-semibold">patients</strong>,{" "}
+            <strong className="text-[#0a0a0a] font-semibold">caregivers</strong>, and{" "}
+            <strong className="text-[#0a0a0a] font-semibold">family</strong> — showing how COPD reverberates through
             daily life far beyond the clinical setting.
           </p>
           <p>

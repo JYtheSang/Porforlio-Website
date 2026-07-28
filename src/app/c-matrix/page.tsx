@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -64,15 +64,15 @@ export default function MatrixC() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Industrial Design · Creative Tech · 2013</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Industrial Design · Creative Tech · 2013</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Matrix C — Customize Your Lighting
           </h1>
         </div>
         <p>
-          <strong className="text-[#fafafa] font-semibold">Matrix C</strong> is a personal wireless lighting system
+          <strong className="text-[#0a0a0a] font-semibold">Matrix C</strong> is a personal wireless lighting system
           designed for real life and all its potential. It combines brilliant, energy-efficient LED light with intuitive
           gesture-based technology. The light, the bridge, and smart controls come together to forever change how you
           control and experience light.
@@ -103,7 +103,7 @@ export default function MatrixC() {
               desc: "Switch between vibrant party colors or ambient tones for movie night and dinner.",
             },
           ].map((item) => (
-            <div key={item.title} className="bg-[#18181b] rounded-2xl overflow-hidden">
+            <div key={item.title} className="bg-[#f4f4f5] rounded-2xl overflow-hidden">
               <div className="w-full aspect-square overflow-hidden bg-white">
                 <Image
                   src={`/projects/c-matrix/${item.img}`}
@@ -115,8 +115,8 @@ export default function MatrixC() {
                 />
               </div>
               <div className="p-5">
-                <p className="text-base font-semibold text-[#fafafa] mb-1">{item.title}</p>
-                <p className="text-sm leading-6 text-[#94a3b8]">{item.desc}</p>
+                <p className="text-base font-semibold text-[#0a0a0a] mb-1">{item.title}</p>
+                <p className="text-sm leading-6 text-[#64748b]">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -140,7 +140,7 @@ export default function MatrixC() {
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-3 gap-4">
           {["proto-1", "proto-2", "proto-3"].map((img) => (
-            <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src={`/projects/c-matrix/${img}.jpg`}
                 alt={`Prototype ${img}`}
@@ -161,7 +161,7 @@ export default function MatrixC() {
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-2 gap-4">
           {["arduino-1", "arduino-2", "arduino-3", "arduino-4"].map((img) => (
-            <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src={`/projects/c-matrix/${img}.jpg`}
                 alt={`Arduino ${img}`}

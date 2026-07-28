@@ -129,7 +129,7 @@ export function AnimatedSectionVideos({
               </div>
               <div className="mt-3 h-5 flex items-center justify-center">
                 {showPlayingIndicator && isPlaying && (
-                  <div className="flex items-center justify-center gap-2 text-[10px] font-medium uppercase tracking-[0.16em] text-[#a1a1aa]">
+                  <div className="flex items-center justify-center gap-2 text-[10px] font-medium uppercase tracking-[0.16em] text-[#71717a]">
                     <span className="relative flex h-2.5 w-2.5 shrink-0 items-center justify-center">
                       <span className="absolute inline-flex h-full w-full rounded-full bg-red-400/70 animate-ping" />
                       <span className="relative inline-flex h-[9px] w-[9px] rounded-full bg-red-400 shadow-[0_0_0_3px_rgba(248,113,113,0.35)]" />

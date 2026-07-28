@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -64,15 +64,15 @@ export default function Sub() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Industrial Design · Product · 2012</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Industrial Design · Product · 2012</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Sub — A Printer That Saves Your Back
           </h1>
         </div>
         <p>
-          <strong className="text-[#fafafa] font-semibold">Sub</strong> is an elegant printer that lives under your desk.
+          <strong className="text-[#0a0a0a] font-semibold">Sub</strong> is an elegant printer that lives under your desk.
           It occupies no tabletop space, keeps your environment clean, and has no physical buttons — all actions are
           handled on laptop, eliminating the confusion of traditional printer interfaces.
         </p>
@@ -85,7 +85,7 @@ export default function Sub() {
           <p>Two core frustrations with existing printers drove this project.</p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-[#18181b] rounded-2xl overflow-hidden">
+          <div className="bg-[#f4f4f5] rounded-2xl overflow-hidden">
             <div className="aspect-[4/3] overflow-hidden">
               <Image
                 src="/projects/sub/problem-1.jpg"
@@ -97,14 +97,14 @@ export default function Sub() {
               />
             </div>
             <div className="p-5">
-              <p className="text-3xl font-bold text-[#fafafa] mb-2">1</p>
-              <p className="text-[#94a3b8] text-sm leading-6">
+              <p className="text-3xl font-bold text-[#0a0a0a] mb-2">1</p>
+              <p className="text-[#64748b] text-sm leading-6">
                 Most existing printers are huge. They sit on tables or floors and consume enormous amounts of workspace,
                 invading the working area.
               </p>
             </div>
           </div>
-          <div className="bg-[#18181b] rounded-2xl overflow-hidden">
+          <div className="bg-[#f4f4f5] rounded-2xl overflow-hidden">
             <div className="aspect-[4/3] overflow-hidden">
               <Image
                 src="/projects/sub/problem-2.jpg"
@@ -116,8 +116,8 @@ export default function Sub() {
               />
             </div>
             <div className="p-5">
-              <p className="text-3xl font-bold text-[#fafafa] mb-2">2</p>
-              <p className="text-[#94a3b8] text-sm leading-6">
+              <p className="text-3xl font-bold text-[#0a0a0a] mb-2">2</p>
+              <p className="text-[#64748b] text-sm leading-6">
                 Printers have complex interfaces with small screens and piles of buttons. Most buttons are never used
                 in a lifetime — and people are always confused by them.
               </p>
@@ -146,7 +146,7 @@ export default function Sub() {
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6 grid grid-cols-2 gap-4">
           {["proto-1", "proto-2", "proto-3", "proto-4"].map((img) => (
-            <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src={`/projects/sub/${img}.jpg`}
                 alt={`Prototype ${img}`}
@@ -169,7 +169,7 @@ export default function Sub() {
           <SectionImage src="/projects/sub/render.jpg" alt="Sub final render" />
         </div>
         <div className="mt-6 max-w-[800px] mx-auto px-6 grid grid-cols-2 gap-4">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
             <Image
               src="/projects/sub/final-1.jpg"
               alt="Sub final product 1"
@@ -179,7 +179,7 @@ export default function Sub() {
               loading="lazy"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
             <Image
               src="/projects/sub/final-2.jpg"
               alt="Sub final product 2"

@@ -47,34 +47,34 @@ export function BollingerBandsChart() {
         <ComposedChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
           <XAxis
             dataKey="date"
-            stroke="#7b7f8f"
-            tick={{ fill: "#7b7f8f", fontSize: 11 }}
-            axisLine={{ stroke: "#2a2d36" }}
+            stroke="#52525b"
+            tick={{ fill: "#52525b", fontSize: 11 }}
+            axisLine={{ stroke: "#e4e4e7" }}
             tickLine={false}
           />
           <YAxis
-            stroke="#7b7f8f"
-            tick={{ fill: "#7b7f8f", fontSize: 11 }}
-            axisLine={{ stroke: "#2a2d36" }}
+            stroke="#52525b"
+            tick={{ fill: "#52525b", fontSize: 11 }}
+            axisLine={{ stroke: "#e4e4e7" }}
             tickLine={false}
             domain={["dataMin - 2", "dataMax + 2"]}
             tickFormatter={(v) => v.toFixed(0)}
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: "#1e2026",
-              border: "1px solid #2a2d36",
+              backgroundColor: "#f4f4f5",
+              border: "1px solid #e4e4e7",
               borderRadius: "8px",
               fontSize: 12,
             }}
-            labelStyle={{ color: "#fafafa" }}
+            labelStyle={{ color: "#0a0a0a" }}
             formatter={(value: number | undefined) => [value != null ? value.toFixed(2) : "", ""]}
             labelFormatter={(label) => label}
           />
           <Line
             type="monotone"
             dataKey="upper"
-            stroke="#6c8eff"
+            stroke="#4a6cf7"
             strokeWidth={1}
             dot={false}
             strokeOpacity={0.7}
@@ -82,7 +82,7 @@ export function BollingerBandsChart() {
           <Line
             type="monotone"
             dataKey="lower"
-            stroke="#6c8eff"
+            stroke="#4a6cf7"
             strokeWidth={1}
             dot={false}
             strokeOpacity={0.7}
@@ -90,7 +90,7 @@ export function BollingerBandsChart() {
           <Line
             type="monotone"
             dataKey="sma"
-            stroke="#a78bfa"
+            stroke="#8b5cf6"
             strokeWidth={1.5}
             dot={false}
             strokeOpacity={0.8}
@@ -98,7 +98,7 @@ export function BollingerBandsChart() {
           <Line
             type="monotone"
             dataKey="price"
-            stroke="#34d399"
+            stroke="#10b981"
             strokeWidth={2}
             dot={false}
           />
@@ -106,10 +106,10 @@ export function BollingerBandsChart() {
           </ResponsiveContainer>
         </div>
       </AnimatedChartWrapper>
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 px-4 pt-3 pb-3 text-[11px] text-[#7b7f8f] border-t border-[#2a2d36]">
-        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#34d399]" />Price</span>
-        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#a78bfa]" />20-day SMA</span>
-        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#6c8eff]" />±1.5σ bands</span>
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 px-4 pt-3 pb-3 text-[11px] text-[#52525b] border-t border-[#e4e4e7]">
+        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#10b981]" />Price</span>
+        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#8b5cf6]" />20-day SMA</span>
+        <span className="flex items-center gap-2 shrink-0"><span className="w-3 h-0.5 shrink-0 bg-[#4a6cf7]" />±1.5σ bands</span>
       </div>
     </div>
   )

@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <div className="text-base leading-7 text-[#94a3b8]">{children}</div>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <div className="text-base leading-7 text-[#64748b]">{children}</div>
     </div>
   )
 }
@@ -64,17 +64,17 @@ export default function Pure() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Industrial Design · Craft · 2012</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Industrial Design · Craft · 2012</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Pure — A Crafted Magnetic Pen
           </h1>
         </div>
         <p>
           The concept of craftsmanship fascinates me. It's about the quality of work, a passion for betterment, and the
           experience of making. Inspired by simplicity in East Asian culture, I designed{" "}
-          <strong className="text-[#fafafa] font-semibold">Pure</strong> — a pen with minimal decoration and
+          <strong className="text-[#0a0a0a] font-semibold">Pure</strong> — a pen with minimal decoration and
           functionality, calling for a simple lifestyle free from the complexity of modern life.
         </p>
         <p className="text-[13px] text-[#71717a]">Individual · 10 weeks</p>
@@ -150,7 +150,7 @@ export default function Pure() {
           <p>The final magnetic pen — machined, assembled, and photographed.</p>
         </SectionText>
         <div className="mt-10 max-w-[800px] mx-auto px-6">
-          <div className="rounded-2xl overflow-hidden bg-[#18181b] mb-4">
+          <div className="rounded-2xl overflow-hidden bg-[#f4f4f5] mb-4">
             <Image
               src="/projects/pure/gallery-1.jpg"
               alt="Pure pen final"
@@ -171,7 +171,7 @@ export default function Pure() {
                 loading="lazy"
               />
             </div>
-            <div className="rounded-2xl overflow-hidden bg-[#18181b]">
+            <div className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
               <Image
                 src="/projects/pure/gallery-3.jpg"
                 alt="Pure pen close-up"
@@ -184,7 +184,7 @@ export default function Pure() {
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {["gallery-4", "gallery-5", "gallery-6", "gallery-7"].map((img) => (
-              <div key={img} className="rounded-2xl overflow-hidden bg-[#18181b]">
+              <div key={img} className="rounded-2xl overflow-hidden bg-[#f4f4f5]">
                 <Image
                   src={`/projects/pure/${img}.jpg`}
                   alt={`Pure pen ${img}`}

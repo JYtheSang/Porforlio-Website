@@ -16,8 +16,8 @@ function SectionText({
 }) {
   return (
     <div className="max-w-[800px] mx-auto px-6 mt-10">
-      <h2 className="text-2xl font-semibold tracking-tight text-[#fafafa] mb-2">{title}</h2>
-      <p className="text-base leading-7 text-[#94a3b8]">{children}</p>
+      <h2 className="text-2xl font-semibold tracking-tight text-[#0a0a0a] mb-2">{title}</h2>
+      <p className="text-base leading-7 text-[#64748b]">{children}</p>
     </div>
   )
 }
@@ -64,15 +64,15 @@ export default function Fixpert() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
+      <div className="max-w-[800px] mx-auto px-6 mt-16 flex flex-col gap-5 text-base leading-7 text-[#64748b]">
         <div className="mb-2">
-          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#a1a1aa] mb-3">Service Design · 2012</p>
-          <h1 className="text-3xl font-semibold tracking-tight text-[#fafafa] leading-tight">
+          <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-[#71717a] mb-3">Service Design · 2012</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-[#0a0a0a] leading-tight">
             Fixpert — Delivery Plus
           </h1>
         </div>
         <p>
-          <strong className="text-[#fafafa] font-semibold">Delivery Plus</strong> is a service design
+          <strong className="text-[#0a0a0a] font-semibold">Delivery Plus</strong> is a service design
           project built within the Fixperts framework — a global initiative that encourages people to use
           creative thinking to improve everyday life.
         </p>
@@ -141,7 +141,7 @@ export default function Fixpert() {
           of stories that captures designers and everyday people solving real problems for real people.
         </SectionText>
         <div className="max-w-[800px] mx-auto px-6 mt-10">
-          <div className="w-full rounded-2xl overflow-hidden bg-[#18181b]" style={{ aspectRatio: "16/9" }}>
+          <div className="w-full rounded-2xl overflow-hidden bg-[#f4f4f5]" style={{ aspectRatio: "16/9" }}>
             <iframe
               src="https://www.youtube.com/embed/jOnKf56IhqA"
               title="Fixpert — Delivery Plus Film"
