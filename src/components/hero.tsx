@@ -41,7 +41,7 @@ export function Hero() {
         transition={skip ? { duration: 0 } : { duration: 1, delay: 1.2, ease }}
       >
         <div className="flex w-fit flex-col gap-0.5">
-          <span>2024–Present</span>
+          <span>2024–2026</span>
           <span>2019–2024</span>
           <span>2016–2019</span>
         </div>
