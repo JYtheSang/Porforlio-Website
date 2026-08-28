@@ -9,6 +9,7 @@ export interface Project {
   description: string
   tags: string[]
   category: ProjectCategory
+  hidden?: boolean
 }
 
 export const projects: Project[] = [
@@ -71,6 +72,7 @@ export const projects: Project[] = [
     description: "Delivering a design system in code with full interaction, states, and motion",
     tags: ["React", "Storybook", "Design System", "Figma", "Coding", "Demo"],
     category: "Product Design",
+    hidden: true,
   },
   {
     title: "SAP Digital Assistant",

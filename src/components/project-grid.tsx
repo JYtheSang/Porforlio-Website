@@ -43,9 +43,9 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
   const [mounted, setMounted] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  const filteredProjects = category
-    ? projects.filter((p) => p.category === category)
-    : projects
+  const filteredProjects = projects.filter(
+    (p) => !p.hidden && (!category || p.category === category)
+  )
 
   useEffect(() => {
     hasLoaded = true
