@@ -30,7 +30,7 @@ export default function About() {
 
         <div className="flex flex-col gap-5 text-base leading-7 text-[#94a3b8]">
           <p>
-            Jie Yang is a user-centered designer born in Shanghai and currently based in the San Francisco Bay Area. He began his career in industrial design, where hands-on making and problem-solving shaped his approach to design. With a strong interest in understanding real user needs, he enjoys translating abstract problems into tangible, usable solutions.
+            Jie Yang is a user-centered designer from Shanghai and currently based in the San Francisco Bay Area. He began his career in industrial design, where hands-on making and problem-solving shaped his approach to design. With a strong interest in understanding real user needs, he enjoys translating abstract problems into tangible, usable solutions.
           </p>
           <p>
             He is currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. His work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>.
