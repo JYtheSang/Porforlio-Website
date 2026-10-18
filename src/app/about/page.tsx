@@ -33,10 +33,10 @@ export default function About() {
             I&apos;m a user-centered designer from Shanghai, currently based in the San Francisco Bay Area. I began my career in industrial design, where hands-on making and problem-solving shaped my approach to design. I enjoy understanding what people need and turning abstract problems into tangible, usable solutions.
           </p>
           <p>
-            I&apos;m currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. My work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>. Previously, I designed enterprise and consumer products at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>.
+            I&apos;m currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer</strong> at Dexmate, designing and building experiences around robotics and AI agents. My work spans product design, design systems, and frontend development. Previously, I designed enterprise and consumer products at SAP and PayPal.
           </p>
           <p>
-            I hold a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design from Tongji University</strong> and a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design from the Institute of Design (IIT)</strong>. I also earned a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science from Georgia Tech (OMSCS)</strong>, deepening my technical understanding and connecting design with engineering.
+            I hold a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design</strong> from Tongji University and a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design</strong> from the Institute of Design (IIT). I also earned a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science</strong> from Georgia Tech (OMSCS), deepening my technical understanding and connecting design with engineering.
           </p>
         </div>
 
