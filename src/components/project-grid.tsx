@@ -160,9 +160,19 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
             </>
           )
 
+          const hoverHandlers = !isMobile ? {
+            onMouseEnter: () => setHoveredProject(project),
+            onMouseLeave: () => setHoveredProject(null),
+          } : {}
+
           if (!project.href) {
             return (
-              <motion.article key={project.title} className="block" variants={cardVariants}>
+              <motion.article
+                key={project.title}
+                className="block"
+                variants={cardVariants}
+                {...hoverHandlers}
+              >
                 {cardContent}
               </motion.article>
             )
@@ -177,10 +187,7 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
               {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
               className="block"
               variants={cardVariants}
-              {...(!isMobile && {
-                onMouseEnter: () => setHoveredProject(project),
-                onMouseLeave: () => setHoveredProject(null),
-              })}
+              {...hoverHandlers}
             >
               {cardContent}
             </Tag>
