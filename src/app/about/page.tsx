@@ -33,13 +33,10 @@ export default function About() {
             Jie Yang is a user-centered designer born in Shanghai and currently based in the San Francisco Bay Area. He began his career in industrial design, where hands-on making and problem-solving shaped his approach to design. With a strong interest in understanding real user needs, he enjoys translating abstract problems into tangible, usable solutions.
           </p>
           <p>
-            He is currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. His work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>. Working closely with teammates across disciplines, he explores AI workflows throughout the design process and uses code to turn ideas into working prototypes and products.
+            He is currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. His work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>.
           </p>
           <p>
-            Jie earned a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design from Tongji University</strong>, completing his first <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design from the Institute of Design (IIT)</strong>. He has worked as <strong className="text-[#fafafa] font-semibold">product designer</strong> at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>, contributing to both business-facing and consumer-facing digital products and cross-functional teams.
-          </p>
-          <p>
-            As his work evolved, Jie became increasingly interested in how emerging technologies can be applied to improve people&apos;s lives in more meaningful and natural ways. He is currently pursuing a second <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science at Georgia Tech (OMSCS)</strong> to deepen his technical understanding and strengthen the bridge between design and engineering.
+            Jie holds a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design from Tongji University</strong> and a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design from the Institute of Design (IIT)</strong>. Previously, he designed enterprise and consumer products at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>. He is currently pursuing a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science at Georgia Tech (OMSCS)</strong> to deepen his technical understanding and connect design with engineering.
           </p>
         </div>
 
