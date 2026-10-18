@@ -61,7 +61,7 @@ export const projects: Project[] = [
     year: "2026–Present",
     action: "Robotics & AI · To be announced",
     description: "Designing and building experiences for robotics and AI agents.",
-    tags: ["Robotics", "AI Agents", "Design Systems", "Frontend"],
+    tags: ["Robotics", "AI Agents", "Design Systems", "Enterprise"],
     category: "Product Design",
   },
   {
