@@ -33,10 +33,10 @@ export default function About() {
             Jie Yang is a user-centered designer from Shanghai and currently based in the San Francisco Bay Area. He began his career in industrial design, where hands-on making and problem-solving shaped his approach to design. With a strong interest in understanding real user needs, he enjoys translating abstract problems into tangible, usable solutions.
           </p>
           <p>
-            He is currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. His work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>.
+            He is currently a <strong className="text-[#fafafa] font-semibold">Senior Product Designer at Dexmate</strong>, designing and building experiences around robotics and AI agents. His work spans <strong className="text-[#fafafa] font-semibold">product design, design systems, and frontend development</strong>. Previously, he designed enterprise and consumer products at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>.
           </p>
           <p>
-            Jie holds a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design from Tongji University</strong> and a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design from the Institute of Design (IIT)</strong>. Previously, he designed enterprise and consumer products at <strong className="text-[#fafafa] font-semibold">SAP</strong> and <strong className="text-[#fafafa] font-semibold">PayPal</strong>. He also earned a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science from Georgia Tech (OMSCS)</strong>, deepening his technical understanding and connecting design with engineering.
+            Jie holds a <strong className="text-[#fafafa] font-semibold">Bachelor&apos;s degree in Industrial Design from Tongji University</strong> and a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Design from the Institute of Design (IIT)</strong>. He also earned a <strong className="text-[#fafafa] font-semibold">Master&apos;s degree in Computer Science from Georgia Tech (OMSCS)</strong>, deepening his technical understanding and connecting design with engineering.
           </p>
         </div>
 
