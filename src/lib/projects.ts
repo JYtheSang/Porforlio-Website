@@ -59,7 +59,7 @@ export const projects: Project[] = [
     image: "/projects/dexmate-logo.png",
     imageLayout: "logo",
     year: "2026–Present",
-    action: "To be announced",
+    action: "Robotics & AI · To be announced",
     description: "To be announced",
     tags: [],
     category: "Product Design",
