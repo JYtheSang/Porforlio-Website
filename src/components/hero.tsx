@@ -23,7 +23,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={skip ? { duration: 0 } : { duration: 1.5, delay: 0.4, ease }}
         >
-          I design, prototype, and ship.
+          I design simple solutions to complex problems.
         </motion.span>
         <motion.span
           className="block mt-4 text-2xl text-[#94a3b8]"
@@ -31,7 +31,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={skip ? { duration: 0 } : { duration: 1.5, delay: 0.8, ease }}
         >
-          Bringing ideas to life through design and code.
+          Design, prototype, and ship in code.
         </motion.span>
       </h1>
     </header>
