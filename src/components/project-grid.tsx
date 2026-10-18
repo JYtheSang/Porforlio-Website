@@ -87,78 +87,103 @@ export function ProjectGrid({ category = null }: ProjectGridProps) {
         animate="visible"
       >
         {filteredProjects.map((project) => {
-          const isExternal = !project.href.startsWith("/")
-          const Tag = isExternal ? motion.a : MotionLink
-          return (
-          <Tag
-            key={project.title}
-            href={project.href}
-            {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
-            className="block"
-            variants={cardVariants}
-            {...(!isMobile && {
-              onMouseEnter: () => setHoveredProject(project),
-              onMouseLeave: () => setHoveredProject(null),
-            })}
-          >
-            <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
-              {project.href === "/fixpert" ? (
-                <div className="w-full h-full bg-white flex items-center justify-center">
-                  <Image
-                    src="/projects/fixpert/logo.png"
-                    alt={project.title}
-                    width={280}
-                    height={105}
-                    className="w-auto h-auto max-w-[70%] max-h-[50%] object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ) : project.href === "/unity-demo-game" ? (
-                <div className="w-full h-full bg-[#151417] flex items-center justify-center">
-                  <Image
-                    src="/projects/unity-logo-dark.png"
-                    alt={project.title}
-                    width={160}
-                    height={160}
-                    className="w-[93px] h-[90px] object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ) : project.href === "/design-system-experiments" ? (
-                <div className="w-full h-full bg-white flex items-center justify-center">
+          const cardContent = (
+            <>
+              <div className="w-full aspect-[3/2] rounded-2xl overflow-hidden bg-[#27272a] mb-3">
+                {project.imageLayout === "logo" ? (
+                  <div className="w-full h-full bg-white flex items-center justify-center">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={2000}
+                      height={443}
+                      className="w-[72%] h-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : project.href === "/fixpert" ? (
+                  <div className="w-full h-full bg-white flex items-center justify-center">
+                    <Image
+                      src="/projects/fixpert/logo.png"
+                      alt={project.title}
+                      width={280}
+                      height={105}
+                      className="w-auto h-auto max-w-[70%] max-h-[50%] object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : project.href === "/unity-demo-game" ? (
+                  <div className="w-full h-full bg-[#151417] flex items-center justify-center">
+                    <Image
+                      src="/projects/unity-logo-dark.png"
+                      alt={project.title}
+                      width={160}
+                      height={160}
+                      className="w-[93px] h-[90px] object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : project.href === "/design-system-experiments" ? (
+                  <div className="w-full h-full bg-white flex items-center justify-center">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={663}
+                      height={406}
+                      unoptimized
+                      className="w-auto h-auto max-w-[72%] max-h-[72%] object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={663}
-                    height={406}
-                    unoptimized
-                    className="w-auto h-auto max-w-[72%] max-h-[72%] object-contain"
+                    width={800}
+                    height={533}
+                    className="w-full h-full object-cover"
                     loading="lazy"
                   />
-                </div>
-              ) : (
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={800}
-                  height={533}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              )}
-            </div>
-            <div className="flex items-center justify-between px-1 mb-1">
-              <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
-                {project.title}
-              </span>
-              <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
-                {project.year}
-              </span>
-            </div>
-            <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
-              {project.action}
-            </p>
-          </Tag>
+                )}
+              </div>
+              <div className="flex items-center justify-between px-1 mb-1">
+                <span className="text-base font-medium tracking-[-0.31px] leading-6 text-[#fafafa] truncate">
+                  {project.title}
+                </span>
+                <span className="text-sm font-normal tracking-[-0.15px] leading-5 text-[#a1a1aa] whitespace-nowrap ml-2">
+                  {project.year}
+                </span>
+              </div>
+              <p className="text-sm font-medium tracking-[-0.15px] leading-5 text-[#94a3b8] px-1">
+                {project.action}
+              </p>
+            </>
+          )
+
+          if (!project.href) {
+            return (
+              <motion.article key={project.title} className="block" variants={cardVariants}>
+                {cardContent}
+              </motion.article>
+            )
+          }
+
+          const isExternal = !project.href.startsWith("/")
+          const Tag = isExternal ? motion.a : MotionLink
+          return (
+            <Tag
+              key={project.title}
+              href={project.href}
+              {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+              className="block"
+              variants={cardVariants}
+              {...(!isMobile && {
+                onMouseEnter: () => setHoveredProject(project),
+                onMouseLeave: () => setHoveredProject(null),
+              })}
+            >
+              {cardContent}
+            </Tag>
           )
         })}
       </motion.div>

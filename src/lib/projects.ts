@@ -2,8 +2,9 @@ export type ProjectCategory = "Product Design" | "Engineering" | "User Research"
 
 export interface Project {
   title: string
-  href: string
+  href?: string
   image: string
+  imageLayout?: "logo"
   year: string
   action: string
   description: string
@@ -52,6 +53,16 @@ export const projects: Project[] = [
     description: "Job comparison Android app with SQLite, layered architecture, and weighted scoring engine",
     tags: ["Georgia Tech", "Java", "Android"],
     category: "Engineering",
+  },
+  {
+    title: "Dexmate",
+    image: "/projects/dexmate-logo.png",
+    imageLayout: "logo",
+    year: "2026–Present",
+    action: "To be announced",
+    description: "To be announced",
+    tags: [],
+    category: "Product Design",
   },
   {
     title: "PayPal Social Payment",
