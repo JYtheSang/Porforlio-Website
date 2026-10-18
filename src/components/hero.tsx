@@ -34,28 +34,6 @@ export function Hero() {
           Combining design, code, and AI.
         </motion.span>
       </h1>
-      <motion.section
-        className="grid grid-cols-[auto_auto_auto] gap-x-4 text-sm text-[#94a3b8]/90 w-fit"
-        initial={{ opacity: skip ? 1 : 0, y: skip ? 0 : 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={skip ? { duration: 0 } : { duration: 1, delay: 1.2, ease }}
-      >
-        <div className="flex w-fit flex-col gap-0.5">
-          <span>2024–2026</span>
-          <span>2019–2024</span>
-          <span>2016–2019</span>
-        </div>
-        <div className="flex w-fit flex-col gap-0.5">
-          <span>Georgia Tech</span>
-          <span>PayPal</span>
-          <span>SAP Labs</span>
-        </div>
-        <div className="flex w-fit flex-col gap-0.5">
-          <span>OMSCS</span>
-          <span>Senior Product Designer</span>
-          <span>UX Design Specialist</span>
-        </div>
-      </motion.section>
     </header>
   )
 }
